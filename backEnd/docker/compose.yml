@@ -1,0 +1,48 @@
+services:
+  shareskilldb:
+    image: mariadb
+    container_name: shareskilldb
+    restart: unless-stopped
+    ports: '3312:3306'
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    volumes:
+    # volume nommé
+      - shareskilldb:/var/lib/mysql
+      - ./database:/docker-entrypoint-initdb.d
+    networks:
+      - shareskill_network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: skillshare_phpmyadmin
+    restart: unless-stopped
+    ports: '8005:80'
+    environment:
+      - PMA_HOST=shareskilldb
+      - PMA_PORT=${PMA_PORT}
+    depends_on:
+      - shareskilldb
+    networks:
+      - shareskill_network
+
+  mailpit:
+    image: axllent/mailpit
+    container_name: skillshare_mail
+    restart: unless-stopped
+    ports:
+      - ${MAILPIT_HTTP_PORT}:8025
+      - ${MAILPIT_STMP_PORT}:1025
+    networks:
+      - shareskill_network
+
+volumes:
+  shareskilldb:
+
+networks:
+  shareskill_network:
+    external: true
+    name: shareskill_network
