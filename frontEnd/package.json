@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "saas": "sass --style=compressed --watch styles:public/assets/styles",
+"sass": "sass --style=compressed --watch styles:public/assets/styles",
     "server": "nodemon server.js",
-    "browser-sync": "browser-sync start --proxy 'localhost:3000' --files \"public/assets/styles/**/*.css,public/assets/js/**/*.js,views/**/*.ejs\"",
-    "start": "concurrently \"npm run saas\" \"npm run server\" \"npm run browser-sync\"" 
+    "browsersync": "browser-sync start --proxy http://localhost:3005 --files \"public/assets/styles/**/*.css,public/assets/js/**/*.js,views/**/*.ejs\"",
+    "start": "concurrently \"npm run sass\" \"npm run server\" \"npm run browsersync\""
   },
   "author": "",
   "license": "ISC",

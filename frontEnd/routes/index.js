@@ -5,7 +5,6 @@ router.get("/", (req, res) => {
   res.render("layout", {
     title: "Accueil",
     view: "pages/home",
-    message: "Bienvenue sur notre site !",
   });
 });
 
