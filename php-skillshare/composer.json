@@ -1,18 +1,14 @@
 {
-    "name": "skillshare/php-app",
-    "description": "PHP version of Skillshare",
+    "name": "bryan/php-skillshare",
+    "autoload": {
+        "psr-4": {
+            "Bryan\\PhpSkillshare\\": "src/"
+        }
+    },
     "authors": [
         {
-            "name": "Jules",
-            "email": "jules@example.com"
+            "name": "b"
         }
     ],
-    "require": {
-        "slim/slim": "4.*",
-        "twig/twig": "3.*",
-        "slim/psr7": "^1.7",
-        "slim/http": "^1.4",
-        "nyholm/psr7": "^1.8",
-        "nyholm/psr7-server": "^1.1"
-    }
+    "require": {}
 }
