@@ -2,6 +2,7 @@ import express from "express";
 import helmet from "helmet";
 import path from "path";
 import indexRoutes from "./routes/index.js";
+dotenv.config();
 
 const app = express();
 const __dirname = path.resolve();
