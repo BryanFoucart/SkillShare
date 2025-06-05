@@ -1,0 +1,90 @@
+version: "3.8"
+
+services:
+  php-app:
+    image: php:8.2-apache # Using PHP 8.2 with Apache
+    container_name: skillshare_php_app
+    volumes:
+      - ./php_app:/var/www/html # Mount the php_app directory
+    ports:
+      - "8000:80" # Map host port 8000 to container port 80
+    networks:
+      - skillshare_network_php
+    environment:
+      # SITE_URL can be set here if needed, e.g., for a specific domain in Docker.
+      # If not set, index.php defaults to "" which works for root access.
+      # Example: SITE_URL=http://localhost:8000
+      # Database environment variables for PHP (if PHP directly connects)
+      # MYSQL_HOST: skillsharedb
+      # MYSQL_DATABASE: ${MYSQL_DATABASE}
+      # MYSQL_USER: ${MYSQL_USER}
+      # MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    depends_on:
+      - skillsharedb_php
+
+  skillsharedb_php: # Renamed to avoid conflict if old compose is running
+    image: mariadb
+    container_name: skillsharedb_php
+    restart: unless-stopped
+    ports:
+      - "3312:3306" # Keep the same port mapping as original for consistency
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    volumes:
+      - skillsharedb_data_php:/var/lib/mysql # Use a new named volume for PHP version
+      - ./backEnd/database:/docker-entrypoint-initdb.d # Mount init scripts
+    networks:
+      - skillshare_network_php
+
+  phpmyadmin_php: # Renamed
+    image: phpmyadmin/phpmyadmin
+    container_name: skillshare_phpmyadmin_php
+    restart: unless-stopped
+    ports:
+      - "8005:80" # Keep the same port mapping
+    environment:
+      PMA_HOST: skillsharedb_php # Point to the renamed db service
+      PMA_PORT: 3306 # MariaDB internal port
+      # MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} # Often needed for PMA login
+    depends_on:
+      - skillsharedb_php
+    networks:
+      - skillshare_network_php
+
+  mailpit_php: # Renamed
+    image: axllent/mailpit
+    container_name: skillshare_mail_php
+    restart: unless-stopped
+    ports:
+      - "${MAILPIT_HTTP_PORT:-8026}:8025" # Default to 8026 if not set, to avoid conflict with original
+      - "${MAILPIT_STMP_PORT:-1026}:1025" # Default to 1026 if not set
+    networks:
+      - skillshare_network_php
+
+volumes:
+  skillsharedb_data_php: # New named volume
+
+networks:
+  skillshare_network_php:
+    driver: bridge # Define a new bridge network for this stack
+    # If you wanted to use the *exact* same external network from the original:
+    # name: skillshare_network
+    # external: true
+    # However, creating a new bridge network makes this PHP stack more self-contained.
+
+# To run this:
+# 1. Ensure you have a .env file in the project root (or where this docker-compose is)
+#    with values for MYSQL_ROOT_PASSWORD, MYSQL_DATABASE, MYSQL_USER, MYSQL_PASSWORD.
+#    And optionally MAILPIT_HTTP_PORT, MAILPIT_STMP_PORT.
+#    Example .env file content:
+#    MYSQL_ROOT_PASSWORD=mysecretrootpassword
+#    MYSQL_DATABASE=skillshare_db
+#    MYSQL_USER=skillshare_user
+#    MYSQL_PASSWORD=skillshare_password
+#    MAILPIT_HTTP_PORT=8026
+#    MAILPIT_STMP_PORT=1026
+
+# 2. Run: docker-compose -f php_docker-compose.yml up -d
