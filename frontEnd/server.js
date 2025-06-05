@@ -6,6 +6,33 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
+
+const API_URL = process.env.API_URL;
+
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: [
+          "'self'",
+          "'unsafe-inline'",
+          "'unsafe-eval'",
+          "localhost:*",
+        ],
+        connectSrc: ["'self'", "ws://localhost:*", API_URL],
+        imgSrc: ["'self'", "data:", "blob:", API_URL],
+        styleSrc: ["'self'", "'unsafe-inline'"],
+        formAction: ["'self'"],
+        baseUri: ["'self'"],
+      },
+    },
+    crossOriginEmbedderPolicy: false,
+    crossOriginResourcePolicy: { policy: "cross-origin" },
+    crossOriginOpenerPolicy: false,
+  })
+);
+
 const __dirname = path.resolve();
 
 app.set("view engine", "ejs");
