@@ -1,4 +1,8 @@
 {
     "name": "skillshare/twig",
-    "require": {}
+    "require": {
+        "scssphp/scssphp": "^2.0",
+        "vlucas/phpdotenv": "^5.6",
+        "twig/twig": "^3.21"
+    }
 }
