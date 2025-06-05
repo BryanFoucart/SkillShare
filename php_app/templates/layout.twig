@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="{{ site_url }}/assets/styles/style.css" />
-  <title>{{ title | default('SkillShare') }}</title>
-</head>
-<body>
-  {% include 'components/navbar.twig' %}
-  <main>
-    {% block content %}{% endblock %}
-  </main>
-</body>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="{{ site_url }}/assets/styles/style.css"/>
+		<link rel="icon" type="image/png" href="{{ site_url }}/media/favicon/favicon-96x96.png" sizes="96x96"/>
+		<link rel="icon" type="image/svg+xml" href="{{ site_url }}/media/favicon/favicon.svg"/>
+		<link rel="shortcut icon" href="{{ site_url }}/media/favicon/favicon.ico"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ site_url }}/media/favicon/apple-touch-icon.png"/>
+		<meta name="apple-mobile-web-app-title" content="Skill-Share"/>
+		<title>{{ title | default('SkillShare') }}</title>
+	</head>
+	<body>
+		{% include 'components/navbar.twig' %}
+		<main>
+			{% block content %}{% endblock %}
+		</main>
+		<script type="module" src="{{ site_url }}/assets/js/navbar.js"></script>
+	</body>
 </html>

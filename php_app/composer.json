@@ -4,5 +4,13 @@
         "scssphp/scssphp": "^2.0",
         "vlucas/phpdotenv": "^5.6",
         "twig/twig": "^3.21"
+    },
+    "scripts": {
+        "compile-sass": "php scripts/compile-sass.php",
+        "serve": "php scripts/server.php",
+        "start": [
+            "@compile-sass",
+            "@serve"
+        ]
     }
 }
