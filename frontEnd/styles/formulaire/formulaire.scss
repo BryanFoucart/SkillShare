@@ -64,6 +64,24 @@ button[type="submit"]:hover {
   background: #0056b3;
 }
 
+/* Nouvelle classe pour les inputs avec erreur */
+input.error-input:focus {
+  border-color: #dc3545; /* Rouge */
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15); /* Rouge transparent */
+  outline: none;
+}
+
+span.error {
+  color: red;
+  font-size: small;
+  font-style: italic;
+}
+
+/* Optionnel : bordure rouge même sans focus */
+input.error-input {
+  border-color: #dc3545;
+}
+
 @media (max-width: 480px) {
   form {
     padding: 25px 20px;

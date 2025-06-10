@@ -9,6 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
     registerForm
       .querySelectorAll(".error")
       .forEach((span) => (span.textContent = ""));
+    registerForm
+      .querySelectorAll(".error-input")
+      .forEach((input) => input.classList.remove("error-input"));
     // validation données
     const { valid, errors } = validateRegisterForm(registerForm);
 
@@ -16,6 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
       for (const [field, message] of Object.entries(errors)) {
         const errorSpan = registerForm.querySelector(`[data-error="${field}"]`);
         if (errorSpan) errorSpan.textContent = message;
+
+        const input = document.querySelector(`[name="${field}"]`);
+        if (input) {
+          input.classList.add("error-input");
+        }
       }
     }
   });
