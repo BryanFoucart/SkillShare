@@ -8,4 +8,11 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/inscription", (req, res) => {
+  res.render("layout", {
+    title: "Inscription",
+    view: "pages/register",
+  });
+});
+
 export default router;

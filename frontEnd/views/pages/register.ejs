@@ -1,0 +1,47 @@
+<head>
+  <link
+    rel="stylesheet"
+    href="<%= process.env.SITE_URL %>/assets/styles/formulaire/formulaire.css"
+  />
+</head>
+<form method="POST" action="" enctype="multipart/form-data">
+  <div class="form-group">
+    <label for="username">Nom d'utilisateur</label>
+    <input
+      type="text"
+      class="form-control"
+      id="username"
+      name="username"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="email">Adresse email</label>
+    <input type="email" class="form-control" id="email" name="email" required />
+  </div>
+
+  <div class="form-group">
+    <label for="password">Mot de passe</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password"
+      name="password"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="avatar">Avatar (image JPG/PNG)</label>
+    <input
+      type="file"
+      class="form-control"
+      id="avatar"
+      name="avatar"
+      accept="image/png, image/jpeg"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary mt-3">S'inscrire</button>
+</form>
