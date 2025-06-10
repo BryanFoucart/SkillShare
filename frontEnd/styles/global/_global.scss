@@ -1,0 +1,18 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: calc(1rem + 2rem);
+  background: #f5f7fa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  margin: 0;
+
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+}

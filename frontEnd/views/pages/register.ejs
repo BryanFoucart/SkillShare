@@ -1,35 +1,32 @@
-<head>
-  <link
-    rel="stylesheet"
-    href="<%= process.env.SITE_URL %>/assets/styles/formulaire/formulaire.css"
-  />
-</head>
-<form method="POST" action="" enctype="multipart/form-data">
+<form id="register-form" method="POST" action="" enctype="multipart/form-data">
   <div class="form-group">
     <label for="username">Nom d'utilisateur</label>
-    <input
-      type="text"
-      class="form-control"
-      id="username"
-      name="username"
-      required
-    />
+    <input type="text" class="form-control" id="username" name="username" />
+    <span class="error" data-error="username"></span>
   </div>
 
   <div class="form-group">
     <label for="email">Adresse email</label>
-    <input type="email" class="form-control" id="email" name="email" required />
+    <input
+      type="text"
+      autocomplete="username"
+      class="form-control"
+      id="email"
+      name="email"
+    />
+    <span class="error" data-error="email"></span>
   </div>
 
   <div class="form-group">
     <label for="password">Mot de passe</label>
     <input
       type="password"
+      autocomplete="current-password"
       class="form-control"
       id="password"
       name="password"
-      required
     />
+    <span class="error" data-error="password"></span>
   </div>
 
   <div class="form-group">
@@ -41,6 +38,7 @@
       name="avatar"
       accept="image/png, image/jpeg"
     />
+    <span class="error" data-error="avatar"></span>
   </div>
 
   <button type="submit" class="btn btn-primary mt-3">S'inscrire</button>
