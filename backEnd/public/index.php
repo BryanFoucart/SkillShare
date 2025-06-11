@@ -2,6 +2,7 @@
 
 use App\core\Router;
 use App\core\Database;
+use App\core\CorsMiddleWare;
 
 require_once __DIR__ . '/../bootstrap.php';
 

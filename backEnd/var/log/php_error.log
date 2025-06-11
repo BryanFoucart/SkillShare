@@ -1,12 +1,91 @@
-[Wed Jun 11 08:16:29 2025] PHP 8.4.5 Development Server (http://localhost:8000) started
-[Wed Jun 11 08:24:03 2025] [::1]:53347 Accepted
-[Wed Jun 11 08:24:03 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Jun 11 08:24:05 2025] PHP Fatal error:  Uncaught Error: Class "CorsMiddleWare" not found in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php:8
+[Wed Jun 11 08:58:43 2025] PHP 8.4.5 Development Server (http://localhost:8000) started
+[Wed Jun 11 08:59:08 2025] [::1]:54363 Accepted
+[Wed Jun 11 08:59:08 2025] [::1]:54364 Accepted
+[Wed Jun 11 08:59:08 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Wed Jun 11 08:59:08 2025] PHP Fatal error:  Uncaught Error: Class "CorsMiddleWare" not found in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php:8
 Stack trace:
 #0 {main}
   thrown in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php on line 8
-[Wed Jun 11 08:24:05 2025] [::1]:53347 [200]: OPTIONS /api/register - Uncaught Error: Class "CorsMiddleWare" not found in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php:8
+[Wed Jun 11 08:59:08 2025] [::1]:54363 [200]: OPTIONS /api/register - Uncaught Error: Class "CorsMiddleWare" not found in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php:8
 Stack trace:
 #0 {main}
   thrown in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php on line 8
-[Wed Jun 11 08:24:05 2025] [::1]:53347 Closing
+[Wed Jun 11 08:59:08 2025] [::1]:54363 Closing
+[Wed Jun 11 08:59:08 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Wed Jun 11 08:59:08 2025] PHP Fatal error:  Uncaught Error: Class "CorsMiddleWare" not found in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php on line 8
+[Wed Jun 11 08:59:08 2025] [::1]:54364 [200]: OPTIONS /api/register - Uncaught Error: Class "CorsMiddleWare" not found in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php on line 8
+[Wed Jun 11 08:59:08 2025] [::1]:54364 Closing
+[Wed Jun 11 08:59:40 2025] [::1]:54388 Accepted
+[Wed Jun 11 08:59:40 2025] [::1]:54389 Accepted
+[Wed Jun 11 08:59:41 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Wed Jun 11 08:59:41 2025] PHP Fatal error:  Uncaught Error: Class "CorsMiddleWare" not found in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php on line 8
+[Wed Jun 11 08:59:41 2025] [::1]:54388 [200]: OPTIONS /api/register - Uncaught Error: Class "CorsMiddleWare" not found in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php on line 8
+[Wed Jun 11 08:59:41 2025] [::1]:54388 Closing
+[Wed Jun 11 08:59:41 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Wed Jun 11 08:59:41 2025] PHP Fatal error:  Uncaught Error: Class "CorsMiddleWare" not found in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php on line 8
+[Wed Jun 11 08:59:41 2025] [::1]:54389 [200]: OPTIONS /api/register - Uncaught Error: Class "CorsMiddleWare" not found in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php on line 8
+[Wed Jun 11 08:59:41 2025] [::1]:54389 Closing
+[Wed Jun 11 09:00:42 2025] [::1]:54433 Accepted
+[Wed Jun 11 09:00:43 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Wed Jun 11 09:00:43 2025] PHP Fatal error:  Uncaught Error: Class "CorsMiddleWare" not found in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php on line 8
+[Wed Jun 11 09:00:43 2025] [::1]:54433 [200]: OPTIONS /api/register - Uncaught Error: Class "CorsMiddleWare" not found in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php on line 8
+[Wed Jun 11 09:00:43 2025] [::1]:54433 Closing
+[Wed Jun 11 09:00:43 2025] [::1]:54434 Accepted
+[Wed Jun 11 09:00:43 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Wed Jun 11 09:00:43 2025] PHP Fatal error:  Uncaught Error: Class "CorsMiddleWare" not found in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php on line 8
+[Wed Jun 11 09:00:43 2025] [::1]:54434 [200]: OPTIONS /api/register - Uncaught Error: Class "CorsMiddleWare" not found in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php on line 8
+[Wed Jun 11 09:00:43 2025] [::1]:54434 Closing
+[Wed Jun 11 09:02:37 2025] [::1]:54521 Accepted
+[Wed Jun 11 09:02:37 2025] [::1]:54522 Accepted
+[Wed Jun 11 09:02:38 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Wed Jun 11 09:02:38 2025] [::1]:54521 [200]: OPTIONS /api/register
+[Wed Jun 11 09:02:38 2025] [::1]:54521 Closing
+[Wed Jun 11 09:02:38 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Wed Jun 11 09:02:38 2025] [::1]:54522 [200]: OPTIONS /api/register
+[Wed Jun 11 09:02:38 2025] [::1]:54522 Closing
+[Wed Jun 11 09:02:38 2025] [::1]:54525 Accepted
+[Wed Jun 11 09:02:39 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Wed Jun 11 09:02:39 2025] [::1]:54525 [200]: POST /api/register
+[Wed Jun 11 09:02:39 2025] [::1]:54525 Closing
+[Wed Jun 11 09:02:39 2025] [::1]:54529 Accepted
+[Wed Jun 11 09:02:39 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Wed Jun 11 09:02:39 2025] [::1]:54529 [200]: POST /api/register
+[Wed Jun 11 09:02:39 2025] [::1]:54529 Closing
+[Wed Jun 11 09:02:43 2025] [::1]:54537 Accepted
+[Wed Jun 11 09:02:43 2025] [::1]:54538 Accepted
+[Wed Jun 11 09:02:43 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Wed Jun 11 09:02:43 2025] [::1]:54537 [200]: POST /api/register
+[Wed Jun 11 09:02:43 2025] [::1]:54537 Closing
+[Wed Jun 11 09:02:44 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Wed Jun 11 09:02:44 2025] [::1]:54538 [200]: POST /api/register
+[Wed Jun 11 09:02:44 2025] [::1]:54538 Closing

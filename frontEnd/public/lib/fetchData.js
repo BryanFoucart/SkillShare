@@ -18,6 +18,28 @@ export async function fetchData({ route, api, options = {} }) {
     headers["Content-Type"] = "application/json";
   }
 
+  //ChatGPT
+  // Construire l'URL complète
+  // const url = new URL(route, api).toString();
+
+  // try {
+  //   const response = await fetch(url, {
+  //     ...options,
+  //     headers,
+  //   });
+
+  //   if (!response.ok) {
+  //     throw new Error(`HTTP error! status: ${response.status}`);
+  //   }
+
+  //   const data = await response.json();
+  //   return data;
+  // } catch (error) {
+  //   console.error("Fetch error:", error);
+  //   throw error;
+  // }
+  // ChatGPT
+
   // Construire la query string si des paramètres sont présents
   let queryString = "";
   if (options.params) {

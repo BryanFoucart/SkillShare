@@ -4,7 +4,7 @@ export function validateRegisterForm(form) {
   // console.log(formData.get("email"));
   if (!formData.get("username").trim())
     errors.username = "Le nom d'utilisateur est requis";
-  console.log(errors.username);
+  // console.log(errors.username);
 
   const emailRegex = new RegExp(
     "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
