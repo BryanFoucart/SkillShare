@@ -8,13 +8,20 @@ class CorsMiddleWare
 {
     public function handle()
     {
-        header('Access-Control-Allow-Origin: http://localhost:3000');
-        header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
-        header('Access-Control-Allow-Headers: Content-Type');
+        // Définition de l'origine autorisée
+        header('Access-Control-Allow-Origin: http://localhost:3005');
+        // Définir les méthodes autorisés
+        header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+        // Définir les headers autorisés
+        header('Access-Control-Allow-Headers: Content-Type, Authorization');
+        // header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
+        // Définir le type de contenu par défaut
+        header('Content-Type: application/json; charset=utc-8');
 
         // Gérer les requêtes OPTIONS (pre-flight)
         if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-            exit(0);
+            http_response_code(200);
+            exit();
         }
     }
 }

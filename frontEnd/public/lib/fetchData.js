@@ -68,4 +68,36 @@ export async function fetchData({ route, api, options = {} }) {
   }
 
   throw new Error(jsonData.error || "Erreur serveur");
+
+  // VERSION COPILOT START
+  // try {
+  //   const result = await fetch(`${api}${route}${queryString}`, {
+  //     ...options,
+  //     headers,
+  //   });
+
+  //   // Vérifier le Content-Type de la réponse
+  //   const contentType = result.headers.get("content-type");
+  //   if (!contentType || !contentType.includes("application/json")) {
+  //     const text = await result.text();
+  //     console.error("Réponse non-JSON:", text);
+  //     throw new Error(
+  //       `Réponse invalide du serveur: ${text.substring(0, 100)}...`
+  //     );
+  //   }
+
+  //   const jsonData = await result.json();
+
+  //   if (!result.ok) {
+  //     throw new Error(
+  //       jsonData.error || `Erreur ${result.status}: ${result.statusText}`
+  //     );
+  //   }
+
+  //   return jsonData;
+  // } catch (error) {
+  //   console.error("Erreur fetch:", error);
+  //   throw error;
+  // }
+  // VERSION COPILOT END
 }

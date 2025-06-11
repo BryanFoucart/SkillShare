@@ -7,10 +7,11 @@ USE skillsharedb;
 CREATE TABLE
     `user` (
         id_user INT AUTO_INCREMENT PRIMARY KEY,
-        avatar VARCHAR(50) NOT NULL DEFAULT 'default-avatar.png',
+        username VARCHAR(50) NOT NULL UNIQUE,
+        avatar VARCHAR(50) NOT NULL,
         email VARCHAR(100) NOT NULL UNIQUE,
+        `role` JSON NOT NULL,
         password_hash VARCHAR(255) NOT NULL,
-        `role` ENUM ('user', 'admin') NOT NULL DEFAULT 'user',
         created_at DATETIME
     );
 

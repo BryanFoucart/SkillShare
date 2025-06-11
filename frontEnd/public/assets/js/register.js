@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // redirection si connecté
   const registerForm = document.querySelector("#register-form");
   const API_URL = document.querySelector("#api-url").value;
-  console.log(API_URL);
+  // console.log(API_URL);
   registerForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     // réinitialisation des champ erreurs à vide
@@ -40,6 +40,25 @@ document.addEventListener("DOMContentLoaded", () => {
         jsonData[key] = value;
       }
     });
+
+    // Si un fichier avatar est présent, créer un formData
+    const avatarFile = formData.get("avatar");
+    if (avatarFile && avatarFile.size > 0) {
+      const avatarFileData = new FormData();
+      avatarFileData.append("avatar", avatarFile);
+      try {
+        const result = await fetchData({
+          route: "/api/upload-avatar",
+          api: API_URL,
+          options: {
+            method: "POST",
+            body: avatarFileData,
+          },
+        });
+      } catch (error) {
+        // message utilisateur ...
+      }
+    }
 
     try {
       const result = await fetchData({

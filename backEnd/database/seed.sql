@@ -1,5 +1,3 @@
-USE skillsharedb;
-
 -- ➡️  Utilisateurs
 INSERT INTO
     `user` (
@@ -7,6 +5,7 @@ INSERT INTO
         avatar,
         email,
         password_hash,
+        `role`,
         created_at
     )
 VALUES
@@ -15,6 +14,7 @@ VALUES
         'sulyvane.png',
         'sulyvane@example.com',
         '$2y$10$2RWot3AW6eFNeRXKDfZNAuqZHu8y/RzFExt2yD0dku/.i1upXbDWG',
+        '["ROLE_USER"]',
         '2025-01-15 10:22:00'
     ),
     (
@@ -22,6 +22,7 @@ VALUES
         'Leo.jpg',
         'Leo@example.com',
         '$2y$10$2RWot3AW6eFNeRXKDfZNAuqZHu8y/RzFExt2yD0dku/.i1upXbDWG',
+        '["ROLE_USER"]',
         '2025-01-16 09:04:00'
     ),
     (
@@ -29,13 +30,15 @@ VALUES
         'Jean-Baptiste.jpg',
         'Jean-Baptiste@example.com',
         '$2y$10$2RWot3AW6eFNeRXKDfZNAuqZHu8y/RzFExt2yD0dku/.i1upXbDWG',
+        '["ROLE_USER"]',
         '2025-02-03 14:37:00'
     ),
     (
         'Frederic',
         'Frederic.png',
         'Frederic@example.com',
-        '$2y$10$2RWot3AW6eFNeRXKDfZNAuqZHu8y/RzFExt2yD0dku/.i1upXbDWG',
+        '$2y$10$2RWot3AW6eFNeRXKDfZNAuqZHu8y/RzFExt2y0dku/.i1upXbDWG',
+        '["ROLE_USER"]',
         '2025-02-11 18:20:00'
     ),
     (
@@ -43,6 +46,7 @@ VALUES
         'Jonathan.jpg',
         'Jonathan@example.com',
         '$2y$10$2RWot3AW6eFNeRXKDfZNAuqZHu8y/RzFExt2yD0dku/.i1upXbDWG',
+        '["ROLE_USER"]',
         '2025-03-01 08:42:00'
     ),
     (
@@ -50,6 +54,7 @@ VALUES
         'Nathalie.png',
         'Nathalie@example.com',
         '$2y$10$2RWot3AW6eFNeRXKDfZNAuqZHu8y/RzFExt2yD0dku/.i1upXbDWG',
+        '["ROLE_USER"]',
         '2025-03-07 19:11:00'
     ),
     (
@@ -57,6 +62,7 @@ VALUES
         'Magalie.jpg',
         'Magalie@example.com',
         '$2y$10$2RWot3AW6eFNeRXKDfZNAuqZHu8y/RzFExt2yD0dku/.i1upXbDWG',
+        '["ROLE_USER"]',
         '2025-04-05 12:05:00'
     ),
     (
@@ -64,6 +70,7 @@ VALUES
         'Nicolas.jpg',
         'Nicolas@example.com',
         '$2y$10$2RWot3AW6eFNeRXKDfZNAuqZHu8y/RzFExt2yD0dku/.i1upXbDWG',
+        '["ROLE_USER"]',
         '2025-04-05 12:05:00'
     ),
     (
@@ -71,6 +78,7 @@ VALUES
         'Thomas.jpg',
         'Thomas@example.com',
         '$2y$10$2RWot3AW6eFNeRXKDfZNAuqZHu8y/RzFExt2yD0dku/.i1upXbDWG',
+        '["ROLE_USER"]',
         '2025-04-05 12:05:00'
     ),
     (
@@ -78,6 +86,7 @@ VALUES
         'Nadia.jpg',
         'Nadia@example.com',
         '$2y$10$2RWot3AW6eFNeRXKDfZNAuqZHu8y/RzFExt2yD0dku/.i1upXbDWG',
+        '["ROLE_USER"]',
         '2025-04-05 12:05:00'
     ),
     (
@@ -85,6 +94,7 @@ VALUES
         'Hugo.jpg',
         'Hugo@example.com',
         '$2y$10$2RWot3AW6eFNeRXKDfZNAuqZHu8y/RzFExt2yD0dku/.i1upXbDWG',
+        '["ROLE_USER"]',
         '2025-04-05 12:05:00'
     ),
     (
@@ -92,6 +102,7 @@ VALUES
         'Christophe.jpg',
         'Christophe@example.com',
         '$2y$10$2RWot3AW6eFNeRXKDfZNAuqZHu8y/RzFExt2yD0dku/.i1upXbDWG',
+        '["ROLE_USER"]',
         '2025-04-05 12:05:00'
     ),
     (
@@ -99,6 +110,7 @@ VALUES
         'Bryan.jpg',
         'Bryan@example.com',
         '$2y$10$2RWot3AW6eFNeRXKDfZNAuqZHu8y/RzFExt2yD0dku/.i1upXbDWG',
+        '["ROLE_USER"]',
         '2025-04-20 16:33:00'
     );
 
@@ -300,7 +312,7 @@ INSERT INTO
         id_exchange,
         id_user,
         rating_value,
-        comment,
+        commentaire,
         created_at,
         updated_at
     )
