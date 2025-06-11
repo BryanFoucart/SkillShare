@@ -1,4 +1,11 @@
+<!-- si traitement fichier => enctype="multipart/form-data" => new FormData() -->
 <form id="register-form" method="POST" action="" enctype="multipart/form-data">
+  <input
+    type="hidden"
+    id="api-url"
+    value="<%= typeof API_URL !== 'undefined' ?
+  API_URL : '' %>"
+  />
   <div class="form-group">
     <label for="username">Nom d'utilisateur</label>
     <input type="text" class="form-control" id="username" name="username" />

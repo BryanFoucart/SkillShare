@@ -5,6 +5,9 @@ use App\core\Database;
 
 require_once __DIR__ . '/../bootstrap.php';
 
+$corsMiddleWare = new CorsMiddleWare();
+$corsMiddleWare->handle();
+
 try {
     $router = new Router();
     $db = Database::getConnexion();

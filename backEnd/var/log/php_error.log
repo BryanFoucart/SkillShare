@@ -1,8 +1,12 @@
-[Fri Jun  6 09:52:26 2025] PHP 8.4.5 Development Server (http://localhost:8000) started
-[Fri Jun  6 11:02:44 2025] [::1]:55999 Accepted
-[Fri Jun  6 11:02:44 2025] [::1]:56000 Accepted
-[Fri Jun  6 11:02:44 2025] [::1]:55999 Closed without sending a request; it was probably just an unused speculative preconnection
-[Fri Jun  6 11:02:44 2025] [::1]:55999 Closing
-[Fri Jun  6 11:02:44 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Fri Jun  6 11:02:44 2025] [::1]:56000 [200]: POST /api/register
-[Fri Jun  6 11:02:44 2025] [::1]:56000 Closing
+[Wed Jun 11 08:16:29 2025] PHP 8.4.5 Development Server (http://localhost:8000) started
+[Wed Jun 11 08:24:03 2025] [::1]:53347 Accepted
+[Wed Jun 11 08:24:03 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Wed Jun 11 08:24:05 2025] PHP Fatal error:  Uncaught Error: Class "CorsMiddleWare" not found in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php on line 8
+[Wed Jun 11 08:24:05 2025] [::1]:53347 [200]: OPTIONS /api/register - Uncaught Error: Class "CorsMiddleWare" not found in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\Users\bryan\Downloads\Formation\PROJETS\SkillShare\backEnd\public\index.php on line 8
+[Wed Jun 11 08:24:05 2025] [::1]:53347 Closing

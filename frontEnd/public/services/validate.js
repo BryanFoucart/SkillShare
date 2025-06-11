@@ -27,9 +27,9 @@ export function validateRegisterForm(form) {
 
   const file = formData.get("avatar");
   let errorsAvatarTab = [];
-  if (!file.name) {
-    errorsAvatarTab.push("Fichier - Avatar obligatoire !");
-  }
+  // if (!file.name) {
+  //   errorsAvatarTab.push("Fichier - Avatar obligatoire !");
+  // }
   if (file.name && !file.type.match(/^image\/(png|jpg|jpeg)$/)) {
     errorsAvatarTab.push("Extension incorrecte [png|jpg|jpeg]");
     // console.log(errors.avatar);
