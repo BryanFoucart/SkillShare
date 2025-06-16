@@ -1,68 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      href="<%= process.env.SITE_URL %>/media/favicon/favicon-96x96.png"
-      sizes="96x96"
-    />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="<%= process.env.SITE_URL %>/media/favicon/favicon.svg"
-    />
-    <link
-      rel="shortcut icon"
-      href="<%= process.env.SITE_URL %>/media/favicon/favicon.ico"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="<%= process.env.SITE_URL %>/media/favicon/apple-touch-icon.png"
-    />
-    <meta name="apple-mobile-web-app-title" content="Skill-Share" />
-    <link
-      rel="stylesheet"
-      href="<%= process.env.SITE_URL %>/assets/styles/style.css"
-    />
-    <% if (title === 'Inscription') { %>
-    <link
-      rel="stylesheet"
-      href="<%= process.env.SITE_URL %>/assets/styles/formulaire/formulaire.css"
-    />
-    <% } %> <% if (title === 'Vérification email') { %>
-    <link
-      rel="stylesheet"
-      href="<%= process.env.SITE_URL %>/assets/styles/verify-email/verify-email.css"
-    />
-    <% } %>
-    <title><%= title || 'SkillShare' %></title>
-  </head>
 
-  <body>
-    <header><%- include('./components/navbar') %></header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="<%= process.env.SITE_URL %>/media/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="<%= process.env.SITE_URL %>/media/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="<%= process.env.SITE_URL %>/media/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="<%= process.env.SITE_URL %>/media/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Skill-Share" />
+  <link rel="stylesheet" href="<%= process.env.SITE_URL %>/assets/styles/style.css" />
+  <% if (title === 'Inscription' || title === 'Connexion') { %>
+  <link rel="stylesheet" href="<%= process.env.SITE_URL %>/assets/styles/formulaire/formulaire.css" />
+  <% } %> <% if (title === 'Vérification email') { %>
+  <link rel="stylesheet" href="<%= process.env.SITE_URL %>/assets/styles/verify-email/verify-email.css" />
+  <% } %>
+  <title><%= title || 'SkillShare' %></title>
+</head>
 
-    <main>
-      <h1><%= title %></h1>
-      <%- include(view) %>
-    </main>
-    <script
-      type="module"
-      src="<%= process.env.SITE_URL %>/assets/js/navbar.js"
-    ></script>
-    <% if (title === 'Inscription') { %>
-    <script
-      type="module"
-      src="<%= process.env.SITE_URL %>/assets/js/register.js"
-    ></script>
-    <% } %> <% if (title === 'Vérification email') { %>
-    <script
-      type="module"
-      src="<%= process.env.SITE_URL %>/assets/js/verify-email.js"
-    ></script>
-    <% } %>
-  </body>
+<body>
+  <header><%- include('./components/navbar') %></header>
+
+  <main>
+    <h1><%= title %></h1>
+    <%- include(view) %>
+  </main>
+  <script type="module" src="<%= process.env.SITE_URL %>/assets/js/navbar.js"></script>
+  <% if (title === 'Inscription') { %>
+  <script type="module" src="<%= process.env.SITE_URL %>/assets/js/register.js"></script>
+  <% } %> <% if (title === 'Vérification email') { %>
+  <script type="module" src="<%= process.env.SITE_URL %>/assets/js/verify-email.js"></script>
+  <% } %> <% if (title === 'Connexion') { %>
+  <script type="module" src="<%= process.env.SITE_URL %>/assets/js/connexion.js"></script>
+  <% } %>
+</body>
+
 </html>

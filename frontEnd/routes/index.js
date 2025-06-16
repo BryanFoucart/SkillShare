@@ -28,4 +28,12 @@ router.get("/verify-email", (req, res) => {
   });
 });
 
+router.get("/connexion", (req, res) => {
+  res.render("layout", {
+    title: "Connexion",
+    view: "pages/connexion",
+    ...globals,
+  });
+});
+
 export default router;

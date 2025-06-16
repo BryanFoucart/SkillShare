@@ -1,0 +1,22 @@
+<section class="login">
+  <form action="" id="login-form">
+    <input type="hidden" id="api-url" value="<%= typeof API_URL !== 'undefined' ?
+  API_URL : '' %>" />
+    <div class="form-group">
+      <label for="email">Email :</label>
+      <input type="text" name="email" autocomplete="current-username" />
+      <span class="error" data-error="email"></span>
+    </div>
+    <div class="form-group">
+      <label for="password">Mot de passe </label><input type="password" name="password" id="password" autocomplete="current-password">
+      <span class="error" data-error="password"></span>
+    </div>
+    <p class="register-link">
+      Pas encore de compte ? <a href="/inscription">Inscrivez-vous ici</a>
+    </p>
+    <button type="submit">Se connecter</button>
+    <div class="message-container" style="display: none">
+      <div id="verify-msg"></div>
+    </div>
+  </form>
+</section>

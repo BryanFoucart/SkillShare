@@ -1,8 +1,9 @@
 export function validateRegisterForm(form) {
   const formData = new FormData(form);
+  const register = document.querySelector("#register-form");
   const errors = {};
   // console.log(formData.get("email"));
-  if (!formData.get("username").trim())
+  if (formData.get("username") !== null && !formData.get("username").trim())
     errors.username = "Le nom d'utilisateur est requis";
   // console.log(errors.username);
 
@@ -25,25 +26,27 @@ export function validateRegisterForm(form) {
     console.log(errors.password);
   }
 
-  const file = formData.get("avatar");
-  let errorsAvatarTab = [];
-  // if (!file.name) {
-  //   errorsAvatarTab.push("Fichier - Avatar obligatoire !");
-  // }
-  if (file.name && !file.type.match(/^image\/(png|jpg|jpeg)$/)) {
-    errorsAvatarTab.push("Extension incorrecte [png|jpg|jpeg]");
-    // console.log(errors.avatar);
-  }
+  if (formData.get("avatar")) {
+    const file = formData.get("avatar");
+    let errorsAvatarTab = [];
+    // if (!file.name) {
+    //   errorsAvatarTab.push("Fichier - Avatar obligatoire !");
+    // }
+    if (file.name && !file.type.match(/^image\/(png|jpg|jpeg)$/)) {
+      errorsAvatarTab.push("Extension incorrecte [png|jpg|jpeg]");
+      // console.log(errors.avatar);
+    }
 
-  const maxSize = 2 * 1024 * 1024; //2MB
-  if (file.name && file.size > maxSize) {
-    errorsAvatarTab.push(`\nFichier trop volumineux [max: 2MB]`);
-    // console.log(errors.avatar);
-  }
+    const maxSize = 2 * 1024 * 1024; //2MB
+    if (file.name && file.size > maxSize) {
+      errorsAvatarTab.push(`\nFichier trop volumineux [max: 2MB]`);
+      // console.log(errors.avatar);
+    }
 
-  if (errorsAvatarTab.length > 0) {
-    errors.avatar = errorsAvatarTab.join(" ");
-    console.log(errors.avatar);
+    if (errorsAvatarTab.length > 0) {
+      errors.avatar = errorsAvatarTab.join(" ");
+      console.log(errors.avatar);
+    }
   }
 
   return {

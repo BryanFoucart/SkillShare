@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 form {
   max-width: 420px;
   margin: 60px auto;
@@ -34,6 +36,23 @@ input[type="file"] {
   border-radius: 8px;
   font-size: 15px;
   transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.register-link,
+.forgot-password-link {
+  display: block;
+  text-align: center;
+  margin-top: $spacing-md;
+  color: $primary-color;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.register-link a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 input:focus {

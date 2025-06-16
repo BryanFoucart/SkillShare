@@ -8,6 +8,7 @@ use DateTime;
 use Exception;
 use App\model\User;
 
+use App\service\JWTService;
 use App\service\MailService;
 use App\core\attribute\Route;
 use App\repository\UserRepository;
@@ -15,6 +16,40 @@ use App\service\FileUploadService;
 
 class UserController
 {
+
+    #[Route('/api/login', 'POST')]
+    public function login()
+    {
+        try {
+
+            $data = json_decode(file_get_contents('php://input'), true);
+            if (!$data) throw new Exception('Json invalide');
+            $userRepository = new UserRepository();
+            $user = $userRepository->findUserByEmail($data['email']);
+            if (!$user) throw new Exception('Email ou mot de passe incorrect !');
+            if (!password_verify($data['password'], $user->getPassword())) throw new Exception('Email ou Mot de passe incorrect !');
+            if (!$user->getIsVerified()) throw new Exception('Veuillez vérifier votre email avant de vous connecter !');
+
+
+            // générer le token JWT 
+            $token = JWTService::generate();
+
+
+            echo json_encode([
+                'success' => true,
+                'token' => $token,
+                'message' => 'Connexion réussie !' . json_encode($user->getUsername())
+            ]);
+        } catch (Exception $e) {
+            error_log('Erreur inscription' . $e->getMessage());
+            http_response_code(400);
+            echo json_encode([
+                'success' => false,
+                'error' => $e->getMessage()
+            ]);
+        }
+    }
+
     #[Route('/api/register', 'POST')]
     public function register()
     {
