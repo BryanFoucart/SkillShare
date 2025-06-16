@@ -1,0 +1,50 @@
+@use "sass:color";
+
+// Colors
+$primary-color: #3498db;
+$primary-dark: color.adjust($primary-color, $lightness: -10%);
+$primary-light: color.adjust($primary-color, $lightness: 10%);
+
+$secondary-color: #2ecc71;
+$secondary-dark: color.adjust($secondary-color, $lightness: -10%);
+$secondary-light: color.adjust($secondary-color, $lightness: 10%);
+
+$danger-color: #e74c3c;
+$danger-dark: color.adjust($danger-color, $lightness: -10%);
+$danger-light: color.adjust($danger-color, $lightness: 10%);
+
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+$white: #ffffff;
+$black: #000000;
+
+// Typography
+$font-family-base: "Roboto", sans-serif;
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+
+// Border radius
+$border-radius-sm: 4px;
+$border-radius: 6px;
+$border-radius-lg: 8px;
+
+// Buttons
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 1.5rem;
+$btn-min-width: 200px;
+$btn-transition: all 0.2s ease;

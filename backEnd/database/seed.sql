@@ -4,7 +4,7 @@ INSERT INTO
         username,
         avatar,
         email,
-        password_hash,
+        password,
         `role`,
         created_at
     )

@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // redirection si connecté
   const registerForm = document.querySelector("#register-form");
   const API_URL = document.querySelector("#api-url").value;
-  // console.log(API_URL);
+  const messageContainer = document.querySelector(".message-container");
+  const message = document.querySelector("#verify-msg");
   registerForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     // réinitialisation des champ erreurs à vide
@@ -55,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
             body: avatarFileData,
           },
         });
+        jsonData.avatar = result.filename;
       } catch (error) {
         // message utilisateur ...
       }
@@ -69,8 +71,20 @@ document.addEventListener("DOMContentLoaded", () => {
           body: JSON.stringify(jsonData),
         },
       });
+      if (!result.success) {
+        throw new Error(result.error);
+      }
+      if (result.success) {
+        registerForm.reset();
+        messageContainer.style.display = "block";
+        message.textContent =
+          "Un email de vérification vous a été envoyé pour compléter l'inscription";
+        message.style.color = "green";
+      }
     } catch (error) {
-      // message utilisateur ...
+      message.textContent = error.message;
+      messageContainer.style.display = "block";
+      message.style.color = "red";
     }
     // // transforme l'objet en fichier .json
     // const jsonDataString = JSON.stringify(jsonData);

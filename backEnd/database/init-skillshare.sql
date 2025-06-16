@@ -11,7 +11,10 @@ CREATE TABLE
         avatar VARCHAR(50) NOT NULL,
         email VARCHAR(100) NOT NULL UNIQUE,
         `role` JSON NOT NULL,
-        password_hash VARCHAR(255) NOT NULL,
+        email_token VARCHAR(255),
+        is_verified BOOLEAN,
+        verified_at DATETIME,
+        password VARCHAR(255) NOT NULL,
         created_at DATETIME
     );
 

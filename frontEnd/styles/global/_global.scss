@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 *,
 *::before,
 *::after {
@@ -10,6 +12,20 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
   margin: 0;
+
+  .message-container {
+    max-width: 400px;
+    margin: $spacing-xl auto;
+    padding: $spacing-xl;
+    background: $gray-100;
+    border: 1px solid $gray-300;
+    border-radius: $border-radius-lg;
+    text-align: center;
+  }
+
+  #verify-msg {
+    margin-bottom: $spacing-md;
+  }
 
   h1 {
     display: flex;

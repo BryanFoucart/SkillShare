@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "concurrently \"cd backEnd && composer start\" \"cd frontEnd && npm start\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

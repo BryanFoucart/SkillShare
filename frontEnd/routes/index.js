@@ -20,4 +20,12 @@ router.get("/inscription", (req, res) => {
   });
 });
 
+router.get("/verify-email", (req, res) => {
+  res.render("layout", {
+    title: "Vérification email",
+    view: "pages/verify-email",
+    ...globals,
+  });
+});
+
 export default router;

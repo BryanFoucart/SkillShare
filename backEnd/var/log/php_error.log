@@ -1,70 +1,307 @@
-[Wed Jun 11 14:11:02 2025] PHP 8.4.5 Development Server (http://localhost:8000) started
-[Wed Jun 11 14:11:35 2025] [::1]:65236 Accepted
-[Wed Jun 11 14:11:36 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Jun 11 14:11:36 2025] [::1]:65236 [200]: POST /api/register
-[Wed Jun 11 14:11:36 2025] [::1]:65236 Closing
-[Wed Jun 11 14:11:36 2025] [::1]:65240 Accepted
-[Wed Jun 11 14:11:36 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Jun 11 14:11:36 2025] [::1]:65240 [200]: OPTIONS /api/register
-[Wed Jun 11 14:11:36 2025] [::1]:65240 Closing
-[Wed Jun 11 14:11:36 2025] [::1]:65243 Accepted
-[Wed Jun 11 14:11:36 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Jun 11 14:11:37 2025] [::1]:65243 [200]: POST /api/register
-[Wed Jun 11 14:11:37 2025] [::1]:65243 Closing
-[Wed Jun 11 14:16:12 2025] [::1]:65457 Accepted
-[Wed Jun 11 14:16:12 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Jun 11 14:16:12 2025] [::1]:65457 [200]: POST /api/register
-[Wed Jun 11 14:16:12 2025] [::1]:65457 Closing
-[Wed Jun 11 14:16:12 2025] [::1]:65461 Accepted
-[Wed Jun 11 14:16:13 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Jun 11 14:16:13 2025] [::1]:65461 [200]: OPTIONS /api/register
-[Wed Jun 11 14:16:13 2025] [::1]:65461 Closing
-[Wed Jun 11 14:16:13 2025] [::1]:65464 Accepted
-[Wed Jun 11 14:16:13 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Jun 11 14:16:14 2025] Erreur SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'bryanfoucart' for key 'username'
-[Wed Jun 11 14:16:14 2025] [::1]:65464 [200]: POST /api/register
-[Wed Jun 11 14:16:14 2025] [::1]:65464 Closing
-[Wed Jun 11 14:16:37 2025] [::1]:65489 Accepted
-[Wed Jun 11 14:16:37 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Jun 11 14:16:37 2025] [::1]:65489 [200]: POST /api/register
-[Wed Jun 11 14:16:37 2025] [::1]:65489 Closing
-[Wed Jun 11 14:16:37 2025] [::1]:65493 Accepted
-[Wed Jun 11 14:16:38 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Jun 11 14:16:38 2025] [::1]:65493 [200]: OPTIONS /api/register
-[Wed Jun 11 14:16:38 2025] [::1]:65493 Closing
-[Wed Jun 11 14:16:38 2025] [::1]:65496 Accepted
-[Wed Jun 11 14:16:38 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Jun 11 14:16:39 2025] [::1]:65496 [200]: POST /api/register
-[Wed Jun 11 14:16:39 2025] [::1]:65496 Closing
-[Wed Jun 11 14:17:17 2025] [::1]:65522 Accepted
-[Wed Jun 11 14:17:17 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Jun 11 14:17:17 2025] [::1]:65522 [200]: GET /api/register
-[Wed Jun 11 14:17:17 2025] [::1]:65522 Closing
-[Wed Jun 11 14:17:17 2025] [::1]:65526 Accepted
-[Wed Jun 11 14:17:18 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Jun 11 14:17:18 2025] [::1]:65526 [200]: GET /favicon.ico
-[Wed Jun 11 14:17:18 2025] [::1]:65526 Closing
-[Wed Jun 11 14:22:23 2025] [::1]:49274 Accepted
-[Wed Jun 11 14:22:23 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Jun 11 14:22:23 2025] [::1]:49274 [200]: POST /api/register
-[Wed Jun 11 14:22:23 2025] [::1]:49274 Closing
-[Wed Jun 11 14:22:23 2025] [::1]:49278 Accepted
-[Wed Jun 11 14:22:24 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Jun 11 14:22:24 2025] [::1]:49278 [200]: OPTIONS /api/register
-[Wed Jun 11 14:22:24 2025] [::1]:49278 Closing
-[Wed Jun 11 14:22:24 2025] [::1]:49281 Accepted
-[Wed Jun 11 14:22:24 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Jun 11 14:22:25 2025] [::1]:49281 [200]: POST /api/register
-[Wed Jun 11 14:22:25 2025] [::1]:49281 Closing
-[Wed Jun 11 14:26:33 2025] [::1]:49698 Accepted
-[Wed Jun 11 14:26:34 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Jun 11 14:26:34 2025] [::1]:49698 [200]: POST /api/upload-avatar
-[Wed Jun 11 14:26:34 2025] [::1]:49698 Closing
-[Wed Jun 11 14:26:34 2025] [::1]:49703 Accepted
-[Wed Jun 11 14:26:34 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Jun 11 14:26:34 2025] [::1]:49703 [200]: OPTIONS /api/register
-[Wed Jun 11 14:26:34 2025] [::1]:49703 Closing
-[Wed Jun 11 14:26:34 2025] [::1]:49706 Accepted
-[Wed Jun 11 14:26:35 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Wed Jun 11 14:26:35 2025] [::1]:49706 [200]: POST /api/register
-[Wed Jun 11 14:26:35 2025] [::1]:49706 Closing
+[Fri Jun 13 09:17:36 2025] PHP 8.4.5 Development Server (http://localhost:8000) started
+[Fri Jun 13 09:17:52 2025] [::1]:53784 Accepted
+[Fri Jun 13 09:17:53 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 09:17:53 2025] [::1]:53784 [200]: POST /api/upload-avatar
+[Fri Jun 13 09:17:53 2025] [::1]:53784 Closing
+[Fri Jun 13 09:17:53 2025] [::1]:53788 Accepted
+[Fri Jun 13 09:17:53 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 09:17:53 2025] [::1]:53788 [200]: OPTIONS /api/register
+[Fri Jun 13 09:17:53 2025] [::1]:53788 Closing
+[Fri Jun 13 09:18:25 2025] [::1]:53817 Accepted
+[Fri Jun 13 09:18:25 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 09:18:25 2025] [::1]:53817 [200]: POST /api/upload-avatar
+[Fri Jun 13 09:18:25 2025] [::1]:53817 Closing
+[Fri Jun 13 09:18:25 2025] [::1]:53821 Accepted
+[Fri Jun 13 09:18:26 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 09:18:26 2025] [::1]:53821 [200]: OPTIONS /api/register
+[Fri Jun 13 09:18:26 2025] [::1]:53821 Closing
+[Fri Jun 13 09:18:26 2025] [::1]:53824 Accepted
+[Fri Jun 13 09:18:26 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 09:18:27 2025] Erreur SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'bryan.foucart27@gmail.com' for key 'email'
+[Fri Jun 13 09:18:27 2025] Erreur inscriptionErreur lors de l'enregistrement de l'utilisateur
+[Fri Jun 13 09:18:27 2025] [::1]:53824 [400]: POST /api/register
+[Fri Jun 13 09:18:27 2025] [::1]:53824 Closing
+[Fri Jun 13 09:18:36 2025] [::1]:53836 Accepted
+[Fri Jun 13 09:18:37 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 09:18:37 2025] [::1]:53836 [200]: OPTIONS /api/verify-email?token=b9064bee613941b2ade72a425c08e915acb8a42910e2001827c8da86e18e2baf
+[Fri Jun 13 09:18:37 2025] [::1]:53836 Closing
+[Fri Jun 13 09:18:37 2025] [::1]:53839 Accepted
+[Fri Jun 13 09:18:37 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 09:18:37 2025] Erreur inscriptionSQLSTATE[42S22]: Column not found: 1054 Unknown column 'verified_at' in 'SET'
+[Fri Jun 13 09:18:37 2025] [::1]:53839 [400]: GET /api/verify-email?token=b9064bee613941b2ade72a425c08e915acb8a42910e2001827c8da86e18e2baf
+[Fri Jun 13 09:18:37 2025] [::1]:53839 Closing
+[Fri Jun 13 09:19:54 2025] [::1]:53874 Accepted
+[Fri Jun 13 09:19:54 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 09:19:54 2025] [::1]:53874 [200]: POST /api/upload-avatar
+[Fri Jun 13 09:19:54 2025] [::1]:53874 Closing
+[Fri Jun 13 09:19:54 2025] [::1]:53878 Accepted
+[Fri Jun 13 09:19:55 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 09:19:55 2025] [::1]:53878 [200]: OPTIONS /api/register
+[Fri Jun 13 09:19:55 2025] [::1]:53878 Closing
+[Fri Jun 13 09:19:55 2025] [::1]:53881 Accepted
+[Fri Jun 13 09:19:55 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 09:19:56 2025] [::1]:53881 [200]: POST /api/register
+[Fri Jun 13 09:19:56 2025] [::1]:53881 Closing
+[Fri Jun 13 09:20:01 2025] [::1]:53894 Accepted
+[Fri Jun 13 09:20:01 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 09:20:01 2025] [::1]:53894 [200]: OPTIONS /api/verify-email?token=3cdb8f834f83181398a46691aa1e242eef9a5391cba760b2086f6f70f8ccd95e
+[Fri Jun 13 09:20:01 2025] [::1]:53894 Closing
+[Fri Jun 13 09:20:01 2025] [::1]:53897 Accepted
+[Fri Jun 13 09:20:02 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 09:20:02 2025] [::1]:53897 [200]: GET /api/verify-email?token=3cdb8f834f83181398a46691aa1e242eef9a5391cba760b2086f6f70f8ccd95e
+[Fri Jun 13 09:20:02 2025] [::1]:53897 Closing
+[Fri Jun 13 09:36:45 2025] [::1]:54540 Accepted
+[Fri Jun 13 09:36:45 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 09:36:45 2025] [::1]:54540 [200]: POST /api/upload-avatar
+[Fri Jun 13 09:36:45 2025] [::1]:54540 Closing
+[Fri Jun 13 09:36:45 2025] [::1]:54545 Accepted
+[Fri Jun 13 09:36:45 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 09:36:45 2025] [::1]:54545 [200]: OPTIONS /api/register
+[Fri Jun 13 09:36:45 2025] [::1]:54545 Closing
+[Fri Jun 13 09:36:45 2025] [::1]:54548 Accepted
+[Fri Jun 13 09:36:46 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 09:36:46 2025] [::1]:54548 [200]: POST /api/register
+[Fri Jun 13 09:36:46 2025] [::1]:54548 Closing
+[Fri Jun 13 10:15:56 2025] [::1]:55450 Accepted
+[Fri Jun 13 10:15:57 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 10:15:57 2025] [::1]:55450 [200]: POST /api/upload-avatar
+[Fri Jun 13 10:15:57 2025] [::1]:55450 Closing
+[Fri Jun 13 10:15:57 2025] [::1]:55454 Accepted
+[Fri Jun 13 10:15:57 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 10:15:57 2025] [::1]:55454 [200]: OPTIONS /api/register
+[Fri Jun 13 10:15:57 2025] [::1]:55454 Closing
+[Fri Jun 13 10:15:57 2025] [::1]:55457 Accepted
+[Fri Jun 13 10:15:58 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 10:15:58 2025] Erreur SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'SilverHand' for key 'username'
+[Fri Jun 13 10:15:58 2025] Erreur inscriptionErreur lors de l'enregistrement de l'utilisateur
+[Fri Jun 13 10:15:58 2025] [::1]:55457 [400]: POST /api/register
+[Fri Jun 13 10:15:58 2025] [::1]:55457 Closing
+[Fri Jun 13 10:16:09 2025] [::1]:55466 Accepted
+[Fri Jun 13 10:16:10 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 10:16:10 2025] [::1]:55466 [200]: POST /api/upload-avatar
+[Fri Jun 13 10:16:10 2025] [::1]:55466 Closing
+[Fri Jun 13 10:16:10 2025] [::1]:55470 Accepted
+[Fri Jun 13 10:16:10 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 10:16:10 2025] [::1]:55470 [200]: OPTIONS /api/register
+[Fri Jun 13 10:16:10 2025] [::1]:55470 Closing
+[Fri Jun 13 10:16:10 2025] [::1]:55473 Accepted
+[Fri Jun 13 10:16:11 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 10:16:11 2025] Erreur SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'bryanfoucart' for key 'username'
+[Fri Jun 13 10:16:11 2025] Erreur inscriptionErreur lors de l'enregistrement de l'utilisateur
+[Fri Jun 13 10:16:11 2025] [::1]:55473 [400]: POST /api/register
+[Fri Jun 13 10:16:11 2025] [::1]:55473 Closing
+[Fri Jun 13 10:16:13 2025] [::1]:55477 Accepted
+[Fri Jun 13 10:16:14 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 10:16:14 2025] [::1]:55477 [200]: POST /api/upload-avatar
+[Fri Jun 13 10:16:14 2025] [::1]:55477 Closing
+[Fri Jun 13 10:16:14 2025] [::1]:55481 Accepted
+[Fri Jun 13 10:16:14 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 10:16:15 2025] Erreur SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'bryanfoucart' for key 'username'
+[Fri Jun 13 10:16:15 2025] Erreur inscriptionErreur lors de l'enregistrement de l'utilisateur
+[Fri Jun 13 10:16:15 2025] [::1]:55481 [400]: POST /api/register
+[Fri Jun 13 10:16:15 2025] [::1]:55481 Closing
+[Fri Jun 13 10:16:27 2025] [::1]:55491 Accepted
+[Fri Jun 13 10:16:28 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 10:16:28 2025] [::1]:55491 [200]: POST /api/upload-avatar
+[Fri Jun 13 10:16:28 2025] [::1]:55491 Closing
+[Fri Jun 13 10:16:28 2025] [::1]:55495 Accepted
+[Fri Jun 13 10:16:28 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 10:16:28 2025] [::1]:55495 [200]: OPTIONS /api/register
+[Fri Jun 13 10:16:28 2025] [::1]:55495 Closing
+[Fri Jun 13 10:16:28 2025] [::1]:55498 Accepted
+[Fri Jun 13 10:16:29 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 10:16:30 2025] [::1]:55498 [200]: POST /api/register
+[Fri Jun 13 10:16:30 2025] [::1]:55498 Closing
+[Fri Jun 13 10:20:56 2025] [::1]:55525 Accepted
+[Fri Jun 13 10:20:56 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 10:20:57 2025] [::1]:55525 [200]: POST /api/upload-avatar
+[Fri Jun 13 10:20:57 2025] [::1]:55525 Closing
+[Fri Jun 13 10:20:57 2025] [::1]:55529 Accepted
+[Fri Jun 13 10:20:57 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 10:20:57 2025] [::1]:55529 [200]: OPTIONS /api/register
+[Fri Jun 13 10:20:57 2025] [::1]:55529 Closing
+[Fri Jun 13 10:20:57 2025] [::1]:55532 Accepted
+[Fri Jun 13 10:20:57 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 10:20:58 2025] [::1]:55532 [200]: POST /api/register
+[Fri Jun 13 10:20:58 2025] [::1]:55532 Closing
+[Fri Jun 13 11:17:12 2025] [::1]:55923 Accepted
+[Fri Jun 13 11:17:12 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:17:12 2025] [::1]:55923 [200]: POST /api/upload-avatar
+[Fri Jun 13 11:17:12 2025] [::1]:55923 Closing
+[Fri Jun 13 11:17:12 2025] [::1]:55927 Accepted
+[Fri Jun 13 11:17:13 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:17:13 2025] [::1]:55927 [200]: OPTIONS /api/register
+[Fri Jun 13 11:17:13 2025] [::1]:55927 Closing
+[Fri Jun 13 11:17:13 2025] [::1]:55930 Accepted
+[Fri Jun 13 11:17:13 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:17:14 2025] [::1]:55930 [200]: POST /api/register
+[Fri Jun 13 11:17:14 2025] [::1]:55930 Closing
+[Fri Jun 13 11:18:27 2025] [::1]:55984 Accepted
+[Fri Jun 13 11:18:28 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:18:28 2025] [::1]:55984 [200]: POST /api/upload-avatar
+[Fri Jun 13 11:18:28 2025] [::1]:55984 Closing
+[Fri Jun 13 11:18:28 2025] [::1]:55988 Accepted
+[Fri Jun 13 11:18:28 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:18:28 2025] [::1]:55988 [200]: OPTIONS /api/register
+[Fri Jun 13 11:18:28 2025] [::1]:55988 Closing
+[Fri Jun 13 11:18:28 2025] [::1]:55992 Accepted
+[Fri Jun 13 11:18:29 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:18:29 2025] Erreur SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'bryanfoucart' for key 'username'
+[Fri Jun 13 11:18:29 2025] Erreur inscriptionErreur lors de l'enregistrement de l'utilisateur
+[Fri Jun 13 11:18:29 2025] [::1]:55992 [400]: POST /api/register
+[Fri Jun 13 11:18:29 2025] [::1]:55992 Closing
+[Fri Jun 13 11:19:03 2025] [::1]:56020 Accepted
+[Fri Jun 13 11:19:03 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:19:03 2025] [::1]:56020 [200]: POST /api/upload-avatar
+[Fri Jun 13 11:19:03 2025] [::1]:56020 Closing
+[Fri Jun 13 11:19:03 2025] [::1]:56024 Accepted
+[Fri Jun 13 11:19:04 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:19:04 2025] [::1]:56024 [200]: OPTIONS /api/register
+[Fri Jun 13 11:19:04 2025] [::1]:56024 Closing
+[Fri Jun 13 11:19:04 2025] [::1]:56027 Accepted
+[Fri Jun 13 11:19:04 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:19:05 2025] Erreur SQL: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'Zenasaul' for key 'username'
+[Fri Jun 13 11:19:05 2025] Erreur inscriptionErreur lors de l'enregistrement de l'utilisateur
+[Fri Jun 13 11:19:05 2025] [::1]:56027 [400]: POST /api/register
+[Fri Jun 13 11:19:05 2025] [::1]:56027 Closing
+[Fri Jun 13 11:20:19 2025] [::1]:56066 Accepted
+[Fri Jun 13 11:20:19 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:20:19 2025] [::1]:56066 [200]: POST /api/upload-avatar
+[Fri Jun 13 11:20:19 2025] [::1]:56066 Closing
+[Fri Jun 13 11:20:19 2025] [::1]:56070 Accepted
+[Fri Jun 13 11:20:20 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:20:20 2025] [::1]:56070 [200]: OPTIONS /api/register
+[Fri Jun 13 11:20:20 2025] [::1]:56070 Closing
+[Fri Jun 13 11:20:20 2025] [::1]:56073 Accepted
+[Fri Jun 13 11:20:20 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:20:21 2025] [::1]:56073 [200]: POST /api/register
+[Fri Jun 13 11:20:21 2025] [::1]:56073 Closing
+[Fri Jun 13 11:20:40 2025] [::1]:56088 Accepted
+[Fri Jun 13 11:20:40 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:20:40 2025] [::1]:56088 [200]: POST /api/upload-avatar
+[Fri Jun 13 11:20:40 2025] [::1]:56088 Closing
+[Fri Jun 13 11:20:40 2025] [::1]:56092 Accepted
+[Fri Jun 13 11:20:40 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:20:40 2025] [::1]:56092 [200]: OPTIONS /api/register
+[Fri Jun 13 11:20:40 2025] [::1]:56092 Closing
+[Fri Jun 13 11:20:40 2025] [::1]:56095 Accepted
+[Fri Jun 13 11:20:41 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:20:41 2025] Erreur inscriptionCette adresse email est déjà utilisée !
+[Fri Jun 13 11:20:41 2025] [::1]:56095 [400]: POST /api/register
+[Fri Jun 13 11:20:41 2025] [::1]:56095 Closing
+[Fri Jun 13 11:20:59 2025] [::1]:56115 Accepted
+[Fri Jun 13 11:20:59 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:20:59 2025] [::1]:56115 [200]: POST /api/upload-avatar
+[Fri Jun 13 11:20:59 2025] [::1]:56115 Closing
+[Fri Jun 13 11:20:59 2025] [::1]:56119 Accepted
+[Fri Jun 13 11:21:00 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:21:00 2025] [::1]:56119 [200]: OPTIONS /api/register
+[Fri Jun 13 11:21:00 2025] [::1]:56119 Closing
+[Fri Jun 13 11:21:00 2025] [::1]:56122 Accepted
+[Fri Jun 13 11:21:00 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:21:00 2025] Erreur inscriptionCette adresse email est déjà utilisée !
+[Fri Jun 13 11:21:00 2025] [::1]:56122 [400]: POST /api/register
+[Fri Jun 13 11:21:00 2025] [::1]:56122 Closing
+[Fri Jun 13 11:36:16 2025] [::1]:56674 Accepted
+[Fri Jun 13 11:36:16 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:36:16 2025] [::1]:56674 [200]: POST /api/upload-avatar
+[Fri Jun 13 11:36:16 2025] [::1]:56674 Closing
+[Fri Jun 13 11:36:16 2025] [::1]:56678 Accepted
+[Fri Jun 13 11:36:17 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:36:17 2025] [::1]:56678 [200]: OPTIONS /api/register
+[Fri Jun 13 11:36:17 2025] [::1]:56678 Closing
+[Fri Jun 13 11:36:17 2025] [::1]:56682 Accepted
+[Fri Jun 13 11:36:17 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:36:17 2025] Erreur inscriptionCette adresse email est déjà utilisée !
+[Fri Jun 13 11:36:17 2025] [::1]:56682 [400]: POST /api/register
+[Fri Jun 13 11:36:17 2025] [::1]:56682 Closing
+[Fri Jun 13 11:48:29 2025] [::1]:57122 Accepted
+[Fri Jun 13 11:48:29 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:48:30 2025] [::1]:57122 [200]: POST /api/upload-avatar
+[Fri Jun 13 11:48:30 2025] [::1]:57122 Closing
+[Fri Jun 13 11:48:30 2025] [::1]:57127 Accepted
+[Fri Jun 13 11:48:30 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:48:30 2025] [::1]:57127 [200]: OPTIONS /api/register
+[Fri Jun 13 11:48:30 2025] [::1]:57127 Closing
+[Fri Jun 13 11:48:30 2025] [::1]:57130 Accepted
+[Fri Jun 13 11:48:30 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:48:30 2025] Erreur inscriptionCe nom d'utilisateur est déjà utilisée !
+[Fri Jun 13 11:48:30 2025] [::1]:57130 [400]: POST /api/register
+[Fri Jun 13 11:48:30 2025] [::1]:57130 Closing
+[Fri Jun 13 11:52:29 2025] [::1]:57267 Accepted
+[Fri Jun 13 11:52:30 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:52:30 2025] [::1]:57267 [200]: POST /api/upload-avatar
+[Fri Jun 13 11:52:30 2025] [::1]:57267 Closing
+[Fri Jun 13 11:52:30 2025] [::1]:57272 Accepted
+[Fri Jun 13 11:52:30 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:52:30 2025] [::1]:57272 [200]: OPTIONS /api/register
+[Fri Jun 13 11:52:30 2025] [::1]:57272 Closing
+[Fri Jun 13 11:52:30 2025] [::1]:57275 Accepted
+[Fri Jun 13 11:52:31 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:52:32 2025] [::1]:57275 [200]: POST /api/register
+[Fri Jun 13 11:52:32 2025] [::1]:57275 Closing
+[Fri Jun 13 11:52:43 2025] [::1]:57286 Accepted
+[Fri Jun 13 11:52:44 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:52:44 2025] [::1]:57286 [200]: POST /api/upload-avatar
+[Fri Jun 13 11:52:44 2025] [::1]:57286 Closing
+[Fri Jun 13 11:52:44 2025] [::1]:57292 Accepted
+[Fri Jun 13 11:52:44 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:52:44 2025] [::1]:57292 [200]: OPTIONS /api/register
+[Fri Jun 13 11:52:44 2025] [::1]:57292 Closing
+[Fri Jun 13 11:52:44 2025] [::1]:57295 Accepted
+[Fri Jun 13 11:52:45 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:52:45 2025] Erreur inscriptionCette adresse email est déjà utilisée !
+[Fri Jun 13 11:52:45 2025] [::1]:57295 [400]: POST /api/register
+[Fri Jun 13 11:52:45 2025] [::1]:57295 Closing
+[Fri Jun 13 11:53:30 2025] [::1]:57327 Accepted
+[Fri Jun 13 11:53:30 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:53:30 2025] [::1]:57327 [200]: POST /api/upload-avatar
+[Fri Jun 13 11:53:30 2025] [::1]:57327 Closing
+[Fri Jun 13 11:53:30 2025] [::1]:57331 Accepted
+[Fri Jun 13 11:53:31 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:53:31 2025] [::1]:57331 [200]: OPTIONS /api/register
+[Fri Jun 13 11:53:31 2025] [::1]:57331 Closing
+[Fri Jun 13 11:53:31 2025] [::1]:57334 Accepted
+[Fri Jun 13 11:53:31 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:53:31 2025] Erreur inscriptionUn compte a déjà été crée avec cet username et cette adresse email.
+[Fri Jun 13 11:53:31 2025] [::1]:57334 [400]: POST /api/register
+[Fri Jun 13 11:53:31 2025] [::1]:57334 Closing
+[Fri Jun 13 11:55:24 2025] [::1]:57401 Accepted
+[Fri Jun 13 11:55:24 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:55:24 2025] [::1]:57401 [200]: POST /api/upload-avatar
+[Fri Jun 13 11:55:24 2025] [::1]:57401 Closing
+[Fri Jun 13 11:55:24 2025] [::1]:57405 Accepted
+[Fri Jun 13 11:55:25 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:55:25 2025] [::1]:57405 [200]: OPTIONS /api/register
+[Fri Jun 13 11:55:25 2025] [::1]:57405 Closing
+[Fri Jun 13 11:55:25 2025] [::1]:57409 Accepted
+[Fri Jun 13 11:55:25 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:55:25 2025] Erreur inscriptionUn compte a déjà été crée avec cet username et cette adresse email.
+[Fri Jun 13 11:55:25 2025] [::1]:57409 [400]: POST /api/register
+[Fri Jun 13 11:55:25 2025] [::1]:57409 Closing
+[Fri Jun 13 11:55:32 2025] [::1]:57417 Accepted
+[Fri Jun 13 11:55:33 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:55:33 2025] [::1]:57417 [200]: POST /api/upload-avatar
+[Fri Jun 13 11:55:33 2025] [::1]:57417 Closing
+[Fri Jun 13 11:55:33 2025] [::1]:57421 Accepted
+[Fri Jun 13 11:55:33 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:55:33 2025] [::1]:57421 [200]: OPTIONS /api/register
+[Fri Jun 13 11:55:33 2025] [::1]:57421 Closing
+[Fri Jun 13 11:55:33 2025] [::1]:57424 Accepted
+[Fri Jun 13 11:55:33 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:55:34 2025] Erreur inscriptionCe nom d'utilisateur est déjà utilisée !
+[Fri Jun 13 11:55:34 2025] [::1]:57424 [400]: POST /api/register
+[Fri Jun 13 11:55:34 2025] [::1]:57424 Closing
+[Fri Jun 13 11:55:43 2025] [::1]:57433 Accepted
+[Fri Jun 13 11:55:43 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:55:43 2025] [::1]:57433 [200]: POST /api/upload-avatar
+[Fri Jun 13 11:55:43 2025] [::1]:57433 Closing
+[Fri Jun 13 11:55:43 2025] [::1]:57437 Accepted
+[Fri Jun 13 11:55:44 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:55:44 2025] [::1]:57437 [200]: OPTIONS /api/register
+[Fri Jun 13 11:55:44 2025] [::1]:57437 Closing
+[Fri Jun 13 11:55:44 2025] [::1]:57440 Accepted
+[Fri Jun 13 11:55:44 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
+[Fri Jun 13 11:55:44 2025] Erreur inscriptionCette adresse email est déjà utilisée !
+[Fri Jun 13 11:55:44 2025] [::1]:57440 [400]: POST /api/register
+[Fri Jun 13 11:55:44 2025] [::1]:57440 Closing

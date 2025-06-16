@@ -33,6 +33,11 @@
       rel="stylesheet"
       href="<%= process.env.SITE_URL %>/assets/styles/formulaire/formulaire.css"
     />
+    <% } %> <% if (title === 'Vérification email') { %>
+    <link
+      rel="stylesheet"
+      href="<%= process.env.SITE_URL %>/assets/styles/verify-email/verify-email.css"
+    />
     <% } %>
     <title><%= title || 'SkillShare' %></title>
   </head>
@@ -52,6 +57,11 @@
     <script
       type="module"
       src="<%= process.env.SITE_URL %>/assets/js/register.js"
+    ></script>
+    <% } %> <% if (title === 'Vérification email') { %>
+    <script
+      type="module"
+      src="<%= process.env.SITE_URL %>/assets/js/verify-email.js"
     ></script>
     <% } %>
   </body>

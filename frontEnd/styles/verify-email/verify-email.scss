@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as *;
+
+.verify {
+  padding: $spacing-xl;
+  #login-link {
+    margin-top: $spacing-xl;
+
+    a {
+      margin-top: $spacing-md;
+      display: inline-block;
+    }
+  }
+}
