@@ -23,22 +23,33 @@ class UserController
         try {
 
             $data = json_decode(file_get_contents('php://input'), true);
-            if (!$data) throw new Exception('Json invalide');
+            if (!$data)
+                throw new Exception('Json invalide');
             $userRepository = new UserRepository();
             $user = $userRepository->findUserByEmail($data['email']);
-            if (!$user) throw new Exception('Email ou mot de passe incorrect !');
-            if (!password_verify($data['password'], $user->getPassword())) throw new Exception('Email ou Mot de passe incorrect !');
-            if (!$user->getIsVerified()) throw new Exception('Veuillez vérifier votre email avant de vous connecter !');
+            if (!$user)
+                throw new Exception('Email ou mot de passe incorrect !');
+            if (!password_verify($data['password'], $user->getPassword()))
+                throw new Exception('Email ou Mot de passe incorrect !');
+            if (!$user->getIsVerified())
+                throw new Exception('Veuillez vérifier votre email avant de vous connecter !');
 
 
             // générer le token JWT 
-            $token = JWTService::generate();
+            $token = JWTService::generate([
+                "id_user" => $user->getId(),
+                "role" => $user->getRole(),
+                "email" => $user->getEmail()
+            ]);
 
 
             echo json_encode([
                 'success' => true,
                 'token' => $token,
-                'message' => 'Connexion réussie !' . json_encode($user->getUsername())
+                'user' => [
+                    'avatar' => $user->getAvatar(),
+                    'username' => $user->getUsername()
+                ]
             ]);
         } catch (Exception $e) {
             error_log('Erreur inscription' . $e->getMessage());
@@ -56,7 +67,8 @@ class UserController
         try {
 
             $data = json_decode(file_get_contents('php://input'), true);
-            if (!$data) throw new Exception('Json invalide');
+            if (!$data)
+                throw new Exception('Json invalide');
 
             $userRepository = new UserRepository();
             if ($userRepository->findUserByUsername($data['username']) && $userRepository->findUserByEmail($data['email'])) {
@@ -85,9 +97,11 @@ class UserController
 
             $saved = $userRepository->save($user);
 
-            if (!$saved) throw new Exception('Erreur lors de la sauvegarde');
+            if (!$saved)
+                throw new Exception('Erreur lors de la sauvegarde');
 
-            if (!$user->getEmailToken()) throw new Exception('Erreur lors de la génération du token de vérification');
+            if (!$user->getEmailToken())
+                throw new Exception('Erreur lors de la génération du token de vérification');
 
             MailService::sendEmailVerification($user->getEmail(), $user->getEmailToken());
 
@@ -142,12 +156,14 @@ class UserController
             $userRepository = new UserRepository();
             $user = $userRepository->findUserByToken($token);
 
-            if (!$user) throw new Exception('Utilisateur introuvable');
+            if (!$user)
+                throw new Exception('Utilisateur introuvable');
 
             $user->setEmailToken(null);
             $user->setIsVerified(true);
             $updated = $userRepository->update($user);
-            if (!$updated) throw new Exception("Erreur lors de la mise à jour de l'utilisateur");
+            if (!$updated)
+                throw new Exception("Erreur lors de la mise à jour de l'utilisateur");
             echo json_encode([
                 'success' => true,
                 'message' => "Email vérifié avec succès"

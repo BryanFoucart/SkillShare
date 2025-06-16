@@ -1,113 +1,55 @@
-[Mon Jun 16 08:52:04 2025] PHP 8.4.5 Development Server (http://localhost:8000) started
-[Mon Jun 16 08:53:25 2025] [::1]:60934 Accepted
-[Mon Jun 16 08:53:26 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 08:53:28 2025] [::1]:60934 [200]: POST /api/upload-avatar
-[Mon Jun 16 08:53:28 2025] [::1]:60934 Closing
-[Mon Jun 16 08:53:28 2025] [::1]:60938 Accepted
-[Mon Jun 16 08:53:28 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 08:53:28 2025] [::1]:60938 [200]: OPTIONS /api/register
-[Mon Jun 16 08:53:28 2025] [::1]:60938 Closing
-[Mon Jun 16 08:53:36 2025] [::1]:60941 Accepted
-[Mon Jun 16 08:53:36 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 08:53:36 2025] [::1]:60941 [200]: POST /api/upload-avatar
-[Mon Jun 16 08:53:36 2025] [::1]:60941 Closing
-[Mon Jun 16 08:53:36 2025] [::1]:60945 Accepted
-[Mon Jun 16 08:53:36 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 08:53:36 2025] [::1]:60945 [200]: OPTIONS /api/register
-[Mon Jun 16 08:53:36 2025] [::1]:60945 Closing
-[Mon Jun 16 08:54:07 2025] [::1]:60966 Accepted
-[Mon Jun 16 08:54:07 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 08:54:11 2025] [::1]:60966 [200]: POST /api/upload-avatar
-[Mon Jun 16 08:54:11 2025] [::1]:60966 Closing
-[Mon Jun 16 08:54:11 2025] [::1]:60971 Accepted
-[Mon Jun 16 08:54:12 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 08:54:12 2025] [::1]:60971 [200]: OPTIONS /api/register
-[Mon Jun 16 08:54:12 2025] [::1]:60971 Closing
-[Mon Jun 16 08:55:53 2025] [::1]:61046 Accepted
-[Mon Jun 16 08:55:54 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 08:55:54 2025] [::1]:61046 [200]: POST /api/upload-avatar
-[Mon Jun 16 08:55:54 2025] [::1]:61046 Closing
-[Mon Jun 16 08:55:54 2025] [::1]:61050 Accepted
-[Mon Jun 16 08:55:54 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 08:55:54 2025] [::1]:61050 [200]: OPTIONS /api/register
-[Mon Jun 16 08:55:54 2025] [::1]:61050 Closing
-[Mon Jun 16 08:56:17 2025] [::1]:61053 Accepted
-[Mon Jun 16 08:56:18 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 08:56:18 2025] [::1]:61053 [200]: POST /api/upload-avatar
-[Mon Jun 16 08:56:18 2025] [::1]:61053 Closing
-[Mon Jun 16 08:56:18 2025] [::1]:61058 Accepted
-[Mon Jun 16 08:56:18 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 08:56:18 2025] [::1]:61058 [200]: OPTIONS /api/register
-[Mon Jun 16 08:56:18 2025] [::1]:61058 Closing
-[Mon Jun 16 08:56:29 2025] [::1]:61062 Accepted
-[Mon Jun 16 08:56:29 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 08:56:30 2025] [::1]:61062 [200]: POST /api/upload-avatar
-[Mon Jun 16 08:56:30 2025] [::1]:61062 Closing
-[Mon Jun 16 08:56:30 2025] [::1]:61066 Accepted
-[Mon Jun 16 08:56:30 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 08:56:30 2025] [::1]:61066 [200]: OPTIONS /api/register
-[Mon Jun 16 08:56:30 2025] [::1]:61066 Closing
-[Mon Jun 16 08:57:31 2025] [::1]:61105 Accepted
-[Mon Jun 16 08:57:32 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 08:57:32 2025] [::1]:61105 [200]: POST /api/upload-avatar
-[Mon Jun 16 08:57:32 2025] [::1]:61105 Closing
-[Mon Jun 16 08:57:32 2025] [::1]:61109 Accepted
-[Mon Jun 16 08:57:32 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 08:57:32 2025] [::1]:61109 [200]: OPTIONS /api/register
-[Mon Jun 16 08:57:32 2025] [::1]:61109 Closing
-[Mon Jun 16 08:57:32 2025] [::1]:61112 Accepted
-[Mon Jun 16 08:57:33 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 08:57:33 2025] [::1]:61112 [200]: POST /api/register
-[Mon Jun 16 08:57:33 2025] [::1]:61112 Closing
-[Mon Jun 16 08:57:51 2025] [::1]:61127 Accepted
-[Mon Jun 16 08:57:51 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 08:57:51 2025] [::1]:61127 [200]: OPTIONS /api/verify-email?token=f803be8607d91ab43c4486672472ab87e7552d574d419f74798b360138d7a70a
-[Mon Jun 16 08:57:51 2025] [::1]:61127 Closing
-[Mon Jun 16 08:57:51 2025] [::1]:61130 Accepted
-[Mon Jun 16 08:57:52 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 08:57:52 2025] [::1]:61130 [200]: GET /api/verify-email?token=f803be8607d91ab43c4486672472ab87e7552d574d419f74798b360138d7a70a
-[Mon Jun 16 08:57:52 2025] [::1]:61130 Closing
-[Mon Jun 16 10:54:13 2025] [::1]:51217 Accepted
-[Mon Jun 16 10:54:13 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 10:54:13 2025] [::1]:51217 [200]: POST /api/upload-avatar
-[Mon Jun 16 10:54:13 2025] [::1]:51217 Closing
-[Mon Jun 16 10:54:13 2025] [::1]:51221 Accepted
-[Mon Jun 16 10:54:14 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 10:54:14 2025] [::1]:51221 [200]: OPTIONS /api/register
-[Mon Jun 16 10:54:14 2025] [::1]:51221 Closing
-[Mon Jun 16 10:54:14 2025] [::1]:51225 Accepted
-[Mon Jun 16 10:54:14 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 10:54:15 2025] [::1]:51225 [200]: POST /api/register
-[Mon Jun 16 10:54:15 2025] [::1]:51225 Closing
-[Mon Jun 16 10:54:19 2025] [::1]:51237 Accepted
-[Mon Jun 16 10:54:20 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 10:54:20 2025] [::1]:51237 [200]: OPTIONS /api/verify-email?token=3028abe1e65190b6c2eb522a9d261458230a45879ca27eb3e9575758e070cdef
-[Mon Jun 16 10:54:20 2025] [::1]:51237 Closing
-[Mon Jun 16 10:54:20 2025] [::1]:51240 Accepted
-[Mon Jun 16 10:54:20 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 10:54:20 2025] [::1]:51240 [200]: GET /api/verify-email?token=3028abe1e65190b6c2eb522a9d261458230a45879ca27eb3e9575758e070cdef
-[Mon Jun 16 10:54:20 2025] [::1]:51240 Closing
-[Mon Jun 16 10:58:50 2025] [::1]:51419 Accepted
-[Mon Jun 16 10:58:50 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 10:58:50 2025] [::1]:51419 [200]: OPTIONS /api/login
-[Mon Jun 16 10:58:50 2025] [::1]:51419 Closing
-[Mon Jun 16 10:58:50 2025] [::1]:51422 Accepted
-[Mon Jun 16 10:58:51 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 10:58:51 2025] [::1]:51422 [200]: POST /api/login
-[Mon Jun 16 10:58:51 2025] [::1]:51422 Closing
-[Mon Jun 16 10:58:56 2025] [::1]:51429 Accepted
-[Mon Jun 16 10:58:57 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 10:58:57 2025] [::1]:51429 [200]: OPTIONS /api/login
-[Mon Jun 16 10:58:57 2025] [::1]:51429 Closing
-[Mon Jun 16 10:58:57 2025] [::1]:51432 Accepted
-[Mon Jun 16 10:58:57 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 10:58:57 2025] [::1]:51432 [200]: POST /api/login
-[Mon Jun 16 10:58:57 2025] [::1]:51432 Closing
-[Mon Jun 16 11:01:41 2025] [::1]:51532 Accepted
-[Mon Jun 16 11:01:41 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 11:01:41 2025] [::1]:51532 [200]: OPTIONS /api/login
-[Mon Jun 16 11:01:41 2025] [::1]:51532 Closing
-[Mon Jun 16 11:01:41 2025] [::1]:51535 Accepted
-[Mon Jun 16 11:01:41 2025] Xdebug: [Step Debug] Time-out connecting to debugging client, waited: 200 ms. Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port).
-[Mon Jun 16 11:01:42 2025] [::1]:51535 [200]: POST /api/login
-[Mon Jun 16 11:01:42 2025] [::1]:51535 Closing
+[Mon Jun 16 12:14:55 2025] PHP Warning:  PHP Startup: Unable to load dynamic library '/path/to/extension/mysqli.so' (tried: /path/to/extension/mysqli.so (Le module spécifié est introuvable), ext\php_/path/to/extension/mysqli.so.dll (Le module spécifié est introuvable)) in Unknown on line 0
+[Mon Jun 16 12:14:55 2025] PHP 8.4.5 Development Server (http://localhost:8000) started
+[Mon Jun 16 12:15:52 2025] [::1]:52913 Accepted
+[Mon Jun 16 12:15:52 2025] [::1]:52913 [200]: OPTIONS /api/login
+[Mon Jun 16 12:15:52 2025] [::1]:52913 Closing
+[Mon Jun 16 12:16:08 2025] [::1]:52936 Accepted
+[Mon Jun 16 12:16:08 2025] [::1]:52936 [200]: OPTIONS /api/login
+[Mon Jun 16 12:16:08 2025] [::1]:52936 Closing
+[Mon Jun 16 12:16:08 2025] [::1]:52937 Accepted
+[Mon Jun 16 12:16:09 2025] Erreur inscriptionClé secrète JWT non définie dans la configuration actuelle
+[Mon Jun 16 12:16:09 2025] [::1]:52937 [400]: POST /api/login
+[Mon Jun 16 12:16:09 2025] [::1]:52937 Closing
+[Mon Jun 16 12:17:00 2025] [::1]:52967 Accepted
+[Mon Jun 16 12:17:00 2025] [::1]:52967 [200]: OPTIONS /api/login
+[Mon Jun 16 12:17:00 2025] [::1]:52967 Closing
+[Mon Jun 16 12:17:00 2025] [::1]:52968 Accepted
+[Mon Jun 16 12:17:01 2025] Erreur inscriptionEmail ou Mot de passe incorrect !
+[Mon Jun 16 12:17:01 2025] [::1]:52968 [400]: POST /api/login
+[Mon Jun 16 12:17:01 2025] [::1]:52968 Closing
+[Mon Jun 16 12:17:06 2025] [::1]:52981 Accepted
+[Mon Jun 16 12:17:06 2025] [::1]:52981 [200]: OPTIONS /api/login
+[Mon Jun 16 12:17:06 2025] [::1]:52981 Closing
+[Mon Jun 16 12:17:06 2025] [::1]:52982 Accepted
+[Mon Jun 16 12:17:07 2025] [::1]:52982 [200]: POST /api/login
+[Mon Jun 16 12:17:07 2025] [::1]:52982 Closing
+[Mon Jun 16 12:17:14 2025] [::1]:52990 Accepted
+[Mon Jun 16 12:17:14 2025] [::1]:52990 [200]: OPTIONS /api/login
+[Mon Jun 16 12:17:14 2025] [::1]:52990 Closing
+[Mon Jun 16 12:17:14 2025] [::1]:52991 Accepted
+[Mon Jun 16 12:17:15 2025] [::1]:52991 [200]: POST /api/login
+[Mon Jun 16 12:17:15 2025] [::1]:52991 Closing
+[Mon Jun 16 12:17:24 2025] [::1]:53007 Accepted
+[Mon Jun 16 12:17:24 2025] [::1]:53007 [200]: OPTIONS /api/login
+[Mon Jun 16 12:17:24 2025] [::1]:53007 Closing
+[Mon Jun 16 12:17:24 2025] [::1]:53008 Accepted
+[Mon Jun 16 12:17:25 2025] [::1]:53008 [200]: POST /api/login
+[Mon Jun 16 12:17:25 2025] [::1]:53008 Closing
+[Mon Jun 16 12:17:32 2025] [::1]:53017 Accepted
+[Mon Jun 16 12:17:32 2025] [::1]:53017 [200]: OPTIONS /api/login
+[Mon Jun 16 12:17:32 2025] [::1]:53017 Closing
+[Mon Jun 16 12:17:32 2025] [::1]:53018 Accepted
+[Mon Jun 16 12:17:32 2025] [::1]:53018 [200]: POST /api/login
+[Mon Jun 16 12:17:32 2025] [::1]:53018 Closing
+[Mon Jun 16 13:05:39 2025] [::1]:54087 Accepted
+[Mon Jun 16 13:05:40 2025] [::1]:54087 [200]: OPTIONS /api/login
+[Mon Jun 16 13:05:40 2025] [::1]:54087 Closing
+[Mon Jun 16 13:05:40 2025] [::1]:54088 Accepted
+[Mon Jun 16 13:05:41 2025] [::1]:54088 [200]: POST /api/login
+[Mon Jun 16 13:05:41 2025] [::1]:54088 Closing
+[Mon Jun 16 13:07:21 2025] [::1]:54239 Accepted
+[Mon Jun 16 13:07:21 2025] [::1]:54239 [200]: OPTIONS /api/login
+[Mon Jun 16 13:07:21 2025] [::1]:54239 Closing
+[Mon Jun 16 13:07:21 2025] [::1]:54240 Accepted
+[Mon Jun 16 13:07:22 2025] [::1]:54240 [200]: POST /api/login
+[Mon Jun 16 13:07:22 2025] [::1]:54240 Closing
