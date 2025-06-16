@@ -1,8 +1,13 @@
 import { fetchData } from "../../lib/fetchData.js";
+import { AuthManager } from "../../services/auth.js";
 import { validateRegisterForm } from "../../services/validate.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   // rediriger si déjà connecté
+  if (AuthManager.isLoggedIn()) {
+    window.location.href = "/";
+    return;
+  }
 
   const loginForm = document.querySelector("#login-form");
   const API_URL = document.querySelector("#api-url").value;
@@ -57,11 +62,17 @@ document.addEventListener("DOMContentLoaded", () => {
         throw new Error(result.error);
       }
       if (result.success) {
-        //   registerForm.reset();
-        //   messageContainer.style.display = "block";
-        //   message.textContent =
-        //     "Un email de vérification vous a été envoyé pour compléter l'inscription";
-        //   message.style.color = "green";
+        localStorage.setItem("JWTToken", result.token);
+        localStorage.setItem("user", JSON.stringify(result.user));
+        message.textContent = "Connexion réussie";
+        messageContainer.style.display = "block";
+        message.style.color = "green";
+
+        AuthManager.updateNavbar();
+
+        setTimeout(() => {
+          window.location.href = "/";
+        }, 2000);
       }
     } catch (error) {
       message.textContent = error.message;
