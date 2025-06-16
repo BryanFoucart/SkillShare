@@ -1,4 +1,5 @@
 /vendor
 /composer.lock
 /.env
+/var/log/php_error.log
 .gitignore
