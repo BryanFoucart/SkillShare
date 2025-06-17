@@ -5,7 +5,7 @@ import { validateRegisterForm } from "../../services/validate.js";
 document.addEventListener("DOMContentLoaded", () => {
   // rediriger si déjà connecté
   if (AuthManager.isLoggedIn()) {
-    window.location.href = "/";
+    // window.location.href = "/";
     return;
   }
 
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         throw new Error(result.error);
       }
       if (result.success) {
-        localStorage.setItem("JWTToken", result.token);
+        localStorage.setItem("JWTtoken", result.token);
         localStorage.setItem("user", JSON.stringify(result.user));
         message.textContent = "Connexion réussie";
         messageContainer.style.display = "block";
@@ -71,7 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
         AuthManager.updateNavbar();
 
         setTimeout(() => {
-          window.location.href = "/";
+          const params = new URLSearchParams(window.location.search);
+          const redirect = params.get("redirect") || "/";
+          window.location.href = redirect;
         }, 2000);
       }
     } catch (error) {

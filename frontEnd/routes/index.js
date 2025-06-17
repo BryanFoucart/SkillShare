@@ -36,4 +36,28 @@ router.get("/connexion", (req, res) => {
   });
 });
 
+router.get("/competences", (req, res) => {
+  res.render("layout", {
+    title: "Compétences",
+    view: "pages/competences",
+    ...globals,
+  });
+});
+
+router.get("/profil", (req, res) => {
+  res.render("layout", {
+    title: "Profil",
+    view: "pages/profil",
+    ...globals,
+  });
+});
+
+router.get("/dashboard", (req, res) => {
+  res.render("layout", {
+    title: "Dashboard",
+    view: "pages/dashboard",
+    ...globals,
+  });
+});
+
 export default router;

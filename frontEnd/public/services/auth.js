@@ -1,19 +1,47 @@
 export class AuthManager {
   static isLoggedIn() {
-    // return !!localStorage.getItem("JWTToken");
-    const token = localStorage.getItem("JWTToken");
-    if (!token || this.isTokenExpired()) {
+    // return !!localStorage.getItem('JWTtoken');
+    const token = localStorage.getItem("JWTtoken");
+    // route autorisé sans connexion
+    const notAllowedPaths = ["%2Fcompetences"];
+
+    if (!token || this.isTokenExpired(token)) {
       const currentPath = encodeURIComponent(window.location.pathname);
       this.logout();
-      window.location.href = `/connexion?redirect=${currentPath}`;
+      if (notAllowedPaths.includes(currentPath)) {
+        window.location.href = `/connexion?redirect=${currentPath}`;
+      }
       return false;
     }
     return true;
   }
 
+  static isTokenExpired(token) {
+    if (!token) return true;
+    try {
+      const payload = JSON.parse(atob(token.split(".")[1]));
+      console.log(Date.now());
+      console.log(payload.exp);
+      return payload.exp < Date.now() / 1000;
+    } catch (error) {
+      return true;
+    }
+  }
+
   static getUser() {
     const userStr = localStorage.getItem("user");
     return userStr ? JSON.parse(userStr) : null;
+  }
+
+  static isAdmin() {
+    try {
+      const user = this.getUser();
+      if (!user || !Array.isArray(user.role)) return false;
+      return user.role.includes("ROLE_ADMIN");
+    } catch (error) {
+      console.error("Erreur lors de la vérification admin :", error);
+      return false;
+    }
   }
 
   static updateNavbar() {
@@ -24,11 +52,13 @@ export class AuthManager {
     }
     const isLoggedIn = this.isLoggedIn();
     const user = this.getUser();
+    const isAdmin = this.isAdmin();
 
     if (isLoggedIn && user) {
       navLinks.innerHTML = `
         <li><a href="/competences">Compétences</a></li>
         <li><a href="/profil">Profil</a></li>
+        ${isAdmin ? '<li><a href="/dashboard">Dashboard</a></li>' : ""}
         <li><a href="#" id="logout-btn">Déconnexion</a></li>
       `;
 
@@ -37,13 +67,13 @@ export class AuthManager {
       logoutBtn.addEventListener("click", (e) => {
         e.preventDefault();
         this.logout();
+        window.location.href = "/connexion";
       });
     }
   }
 
   static logout() {
-    localStorage.removeItem("JWTToken");
+    localStorage.removeItem("JWTtoken");
     localStorage.removeItem("user");
-    window.location.href = "/connexion";
   }
 }
