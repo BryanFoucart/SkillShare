@@ -1,7 +1,7 @@
 {
-  "scripts": {
-    "start": "concurrently \"cd backEnd/docker && docker compose up\" \"cd backEnd && composer start\" \"cd frontEnd && npm start\""
-  },
+"scripts": {
+  "start": "sh ./start.sh"
+},
   "devDependencies": {
     "concurrently": "^8.2.2"
   }

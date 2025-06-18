@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8" />
@@ -32,6 +32,8 @@
   <script type="module" src="<%= process.env.SITE_URL %>/assets/js/verify-email.js"></script>
   <% } %> <% if (title === 'Connexion') { %>
   <script type="module" src="<%= process.env.SITE_URL %>/assets/js/connexion.js"></script>
+  <% } %> <% if (title === 'Dashboard') { %>
+  <script type="module" src="<%= process.env.SITE_URL %>/assets/js/dashboard.js"></script>
   <% } %>
 </body>
 

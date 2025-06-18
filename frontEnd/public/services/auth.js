@@ -2,18 +2,32 @@ export class AuthManager {
   static isLoggedIn() {
     // return !!localStorage.getItem('JWTtoken');
     const token = localStorage.getItem("JWTtoken");
-    // route autorisé sans connexion
-    const notAllowedPaths = ["%2Fcompetences"];
 
     if (!token || this.isTokenExpired(token)) {
-      const currentPath = encodeURIComponent(window.location.pathname);
-      this.logout();
-      if (notAllowedPaths.includes(currentPath)) {
-        window.location.href = `/connexion?redirect=${currentPath}`;
-      }
+      this.redirectUserToLogin();
       return false;
     }
     return true;
+  }
+
+  static redirectUserToLogin(message) {
+    // route autorisé sans connexion
+    const notAllowedPaths = ["%2Fcompetences", "%2Fprofil", "%2Fdashboard"];
+    const currentPath = encodeURIComponent(window.location.pathname);
+    this.logout();
+    if (notAllowedPaths.includes(currentPath)) {
+      window.location.href = `/connexion?redirect=${currentPath}${
+        message ? `&message=${encodeURIComponent(message)}` : ""
+      }`;
+    }
+    return false;
+  }
+
+  static hasRole(role) {
+    const token = localStorage.getItem("JWTtoken");
+    if (!token) return false;
+    const payload = JSON.parse(atob(token.split(".")[1]));
+    return payload.role.includes(`ROLE_${role}`);
   }
 
   static isTokenExpired(token) {
@@ -75,5 +89,22 @@ export class AuthManager {
   static logout() {
     localStorage.removeItem("JWTtoken");
     localStorage.removeItem("user");
+  }
+
+  static checkAdminAccess() {
+    // Vérifier d'abord si l'utilisateur est connecté
+    this.isLoggedIn();
+
+    // Vérifier ensuite s'il a le rôle ADMIN
+    if (!this.hasRole("ADMIN")) {
+      // Rediriger vers la page de connexion si non admin
+      console.warn("Accès refusé : utilisateur non admin");
+      // Redirection vers la page de connexion
+      this.redirectUserToLogin(
+        "Vous devez adminstrateur pour accéder au dashboard."
+      );
+      return false;
+    }
+    return true;
   }
 }

@@ -8,7 +8,7 @@ class MailService
 {
     public static function sendEmailVerification(string $email, string $token)
     {
-        $link = "http://localhost:3005/verify-email?token=$token";
+        $link = "http://localhost:3000/verify-email?token=$token";
 
         $subject = "🔐 Veuillez vérifier votre adresse électronique";
         $message = "        <html>

@@ -1,5 +1,8 @@
 <section class="login">
   <form action="" id="login-form">
+    <div class="access-messages" style="display:none;">
+      <div id="access-msg"></div>
+    </div>
     <input type="hidden" id="api-url" value="<%= typeof API_URL !== 'undefined' ?
   API_URL : '' %>" />
     <div class="form-group">

@@ -9,7 +9,7 @@ class CorsMiddleWare
     public function handle()
     {
         // Définition de l'origine autorisée
-        header('Access-Control-Allow-Origin: http://localhost:3005');
+        header('Access-Control-Allow-Origin: http://localhost:3001');
         // Définir les méthodes autorisés
         header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
         // Définir les headers autorisés

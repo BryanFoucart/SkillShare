@@ -3,6 +3,27 @@ import { AuthManager } from "../../services/auth.js";
 import { validateRegisterForm } from "../../services/validate.js";
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Récupération des paramètres d'URL à l'intérieur du DOMContentLoaded
+  const params = new URLSearchParams(window.location.search);
+
+  // Récupération du message
+  const message = params.get("message") || "";
+
+  // récupération des UL messages
+  const accessMessageContainer = document.querySelector(".access-messages");
+  const accessMessageText = document.querySelector("#access-msg");
+
+  // Affichage du message s'il existe
+  if (message && message.trim() !== "") {
+    accessMessageContainer.style.display = "block";
+    accessMessageText.textContent = message;
+    accessMessageText.style.color = "red";
+  } else {
+    console.log("Pas de message à afficher");
+    accessMessageContainer.style.display = "none";
+    accessMessageText.textContent = "";
+  }
+
   // rediriger si déjà connecté
   if (AuthManager.isLoggedIn()) {
     // window.location.href = "/";
@@ -12,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.querySelector("#login-form");
   const API_URL = document.querySelector("#api-url").value;
   const messageContainer = document.querySelector(".message-container");
-  const message = document.querySelector("#verify-msg");
+  const messageVerify = document.querySelector("#verify-msg");
 
   loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -64,9 +85,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (result.success) {
         localStorage.setItem("JWTtoken", result.token);
         localStorage.setItem("user", JSON.stringify(result.user));
-        message.textContent = "Connexion réussie";
+        messageVerify.textContent = "Connexion réussie";
         messageContainer.style.display = "block";
-        message.style.color = "green";
+        messageVerify.style.color = "green";
 
         AuthManager.updateNavbar();
 
@@ -77,9 +98,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 2000);
       }
     } catch (error) {
-      message.textContent = error.message;
+      messageVerify.textContent = error.message;
       messageContainer.style.display = "block";
-      message.style.color = "red";
+      messageVerify.style.color = "red";
     }
   });
 });

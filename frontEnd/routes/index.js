@@ -60,4 +60,14 @@ router.get("/dashboard", (req, res) => {
   });
 });
 
+// Cette route doit être placée en dernier pour capturer toutes les routes non définies
+router.use((req, res, next) => {
+  console.log("Route 404 activée pour:", req.path); // Log pour le débogage
+  return res.status(404).render("layout", {
+    title: "Page non trouvée",
+    view: "pages/error-404",
+    ...globals,
+  });
+});
+
 export default router;

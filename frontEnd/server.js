@@ -46,7 +46,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRoutes);
 
-const PORT = process.env.PORT || 3005;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(
     `serveur en écoute sur le port ${PORT}, disponible à l'adresse http://localhost:${PORT}`

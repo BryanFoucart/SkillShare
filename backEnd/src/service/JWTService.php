@@ -28,7 +28,7 @@ class JWTService
             'alg' => 'HS256'
         ];
 
-        // payload aveec experition 24h
+        // payload avec expiration 24h
         $payload['exp'] = time() + (24 * 60 * 60);
         // $payload['exp'] = time() + (30); // test token
 
