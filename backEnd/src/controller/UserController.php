@@ -178,4 +178,43 @@ class UserController
             ]);
         }
     }
+
+    #[Route('/api/user/update', 'POST')]
+    public function updateProfil()
+    {
+        try {
+            $data = json_decode(file_get_contents('php://input'), true);
+            if (!$data) throw new Exception('Json invalide');
+            $userRepository = new UserRepository();
+            // Récupération token
+            $token = str_replace('Bearer ', '', $_SERVER['HTTP_AUTORIZATION'] ?? '');
+            if (!$token) throw new Exception('Non autorisé');
+
+            // Appel du service JWT pour vérifier le token
+            $verifToken = JWTService::verifyToken($token);
+            if (!$verifToken) throw new Exception('Token invalide');
+
+            $user = $userRepository->findUserById($verifToken['id_user']);
+            if (!$user) throw new Exception('Utilisateur non trouvé');
+
+            // mettre à jour les infos utilisateurs
+            if (isset($data['username'])) $user->setUsername($data['username']);
+            // si autre champ à modifier
+            // if (isset($data['firstname'])) $user->setUsername($data['firstname']);
+
+            $updated = $userRepository->update($user);
+            if (!$updated) throw new Exception('Problème d\'update utilisateur BDD');
+            echo json_encode([
+                'success' => true,
+                'message' => 'Modification effectuée !'
+            ]);
+        } catch (Exception $e) {
+            error_log('Erreur update' . $e->getMessage());
+            http_response_code(400);
+            echo json_encode([
+                'success' => false,
+                'error' => $e->getMessage()
+            ]);
+        }
+    }
 }

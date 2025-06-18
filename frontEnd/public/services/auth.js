@@ -1,10 +1,10 @@
 export class AuthManager {
-  static isLoggedIn() {
+  static isLoggedIn(message) {
     // return !!localStorage.getItem('JWTtoken');
     const token = localStorage.getItem("JWTtoken");
 
     if (!token || this.isTokenExpired(token)) {
-      this.redirectUserToLogin();
+      this.redirectUserToLogin(message);
       return false;
     }
     return true;
@@ -101,7 +101,7 @@ export class AuthManager {
       console.warn("Accès refusé : utilisateur non admin");
       // Redirection vers la page de connexion
       this.redirectUserToLogin(
-        "Vous devez adminstrateur pour accéder au dashboard."
+        "Vous devez être adminstrateur pour accéder au dashboard."
       );
       return false;
     }

@@ -10,10 +10,12 @@
   <link rel="apple-touch-icon" sizes="180x180" href="<%= process.env.SITE_URL %>/media/favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="Skill-Share" />
   <link rel="stylesheet" href="<%= process.env.SITE_URL %>/assets/styles/style.css" />
-  <% if (title === 'Inscription' || title === 'Connexion') { %>
+  <% if (title === 'Inscription' || title === 'Connexion' || title === 'Profil') { %>
   <link rel="stylesheet" href="<%= process.env.SITE_URL %>/assets/styles/formulaire/formulaire.css" />
   <% } %> <% if (title === 'Vérification email') { %>
   <link rel="stylesheet" href="<%= process.env.SITE_URL %>/assets/styles/verify-email/verify-email.css" />
+  <% } %> <% if (title === 'Profil') { %>
+  <link rel="stylesheet" href="<%= process.env.SITE_URL %>/assets/styles/profil/profil.css" />
   <% } %>
   <title><%= title || 'SkillShare' %></title>
 </head>
@@ -34,6 +36,8 @@
   <script type="module" src="<%= process.env.SITE_URL %>/assets/js/connexion.js"></script>
   <% } %> <% if (title === 'Dashboard') { %>
   <script type="module" src="<%= process.env.SITE_URL %>/assets/js/dashboard.js"></script>
+  <% } %> <% if (title === 'Profil') { %>
+  <script type="module" src="<%= process.env.SITE_URL %>/assets/js/profil.js"></script>
   <% } %>
 </body>
 
