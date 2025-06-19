@@ -72,6 +72,7 @@ class UserController
                 throw new Exception('Json invalide');
 
             $userRepository = new UserRepository();
+
             if ($userRepository->findUserByUsername($data['username']) && $userRepository->findUserByEmail($data['email'])) {
                 throw new Exception("Un compte a déjà été crée avec cet username et cette adresse email.");
             } elseif ($userRepository->findUserByEmail($data['email'])) {
@@ -179,37 +180,102 @@ class UserController
         }
     }
 
+    //     #[Route('/api/user/update', 'POST')]
+    //     public function updateProfil()
+    //     {
+    //         try {
+    //             $data = json_decode(file_get_contents('php://input'), true);
+    //             if (!$data) throw new Exception('Json invalide');
+    //             $userRepository = new UserRepository();
+    //             // Récupération token
+    //             $headers = getallheaders();
+    //             $authHeader = $headers['Authorization'] ?? $headers['authorization'] ?? '';
+
+    //             $token = str_replace('Bearer ', '', $authHeader);
+    //             if (!$token) throw new Exception('Not authorized');
+
+    //             // Appel du service JWT pour vérifier le token
+    //             $verifToken = JWTService::verifyToken($token);
+    //             if (!$verifToken) throw new Exception('Token invalide');
+
+    //             $user = $userRepository->findUserById($verifToken['id_user']);
+    //             if (!$user) throw new Exception('Utilisateur non trouvé');
+
+    //             // mettre à jour les infos utilisateurs
+    //             if (isset($data['username'])) $user->setUsername($data['username']);
+    //             // si autre champ à modifier
+    //             // if (isset($data['firstname'])) $user->setUsername($data['firstname']);
+
+    //             $updated = $userRepository->update($user);
+    //             if (!$updated) throw new Exception('Problème d\'update utilisateur BDD');
+    //             echo json_encode([
+    //                 'success' => true,
+    //                 'message' => 'Modification effectuée !'
+    //             ]);
+    //         } catch (Exception $e) {
+    //             error_log('Erreur update' . $e->getMessage());
+    //             http_response_code(400);
+    //             echo json_encode([
+    //                 'success' => false,
+    //                 'error' => $e->getMessage()
+    //             ]);
+    //         }
+    //     }
+    // }
+
     #[Route('/api/user/update', 'POST')]
     public function updateProfil()
     {
         try {
             $data = json_decode(file_get_contents('php://input'), true);
-            if (!$data) throw new Exception('Json invalide');
-            $userRepository = new UserRepository();
-            // Récupération token
-            $token = str_replace('Bearer ', '', $_SERVER['HTTP_AUTORIZATION'] ?? '');
-            if (!$token) throw new Exception('Non autorisé');
+            if (!$data) {
+                throw new Exception('Json invalide');
+            }
 
-            // Appel du service JWT pour vérifier le token
+            // Log des données reçues
+            error_log('Données reçues: ' . json_encode($data));
+
+            $userRepository = new UserRepository();
+            $headers = getallheaders();
+            $authHeader = $headers['Authorization'] ?? $headers['authorization'] ?? '';
+
+            error_log('Auth header: ' . $authHeader); // Log du header d'autorisation
+
+            $token = str_replace('Bearer ', '', $authHeader);
+            if (!$token) {
+                throw new Exception('Token manquant');
+            }
+
             $verifToken = JWTService::verifyToken($token);
-            if (!$verifToken) throw new Exception('Token invalide');
+            if (!$verifToken) {
+                throw new Exception('Token invalide');
+            }
 
             $user = $userRepository->findUserById($verifToken['id_user']);
-            if (!$user) throw new Exception('Utilisateur non trouvé');
+            if (!$user) {
+                throw new Exception('Utilisateur non trouvé');
+            }
 
-            // mettre à jour les infos utilisateurs
-            if (isset($data['username'])) $user->setUsername($data['username']);
-            // si autre champ à modifier
-            // if (isset($data['firstname'])) $user->setUsername($data['firstname']);
+            if (isset($data['username'])) {
+                // Vérifier si le nom d'utilisateur existe déjà
+                $existingUser = $userRepository->findUserByUsername($data['username']);
+                if ($existingUser && $existingUser->getId() !== $user->getId()) {
+                    throw new Exception('Ce nom d\'utilisateur est déjà pris');
+                }
+                $user->setUsername($data['username']);
+            }
 
             $updated = $userRepository->update($user);
-            if (!$updated) throw new Exception('Problème d\'update utilisateur BDD');
+            if (!$updated) {
+                throw new Exception('Erreur lors de la mise à jour');
+            }
+
             echo json_encode([
                 'success' => true,
-                'message' => 'Modification effectuée !'
+                'message' => 'Profil mis à jour avec succès'
             ]);
         } catch (Exception $e) {
-            error_log('Erreur update' . $e->getMessage());
+            error_log('Erreur update: ' . $e->getMessage());
             http_response_code(400);
             echo json_encode([
                 'success' => false,

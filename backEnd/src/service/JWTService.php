@@ -59,8 +59,6 @@ class JWTService
     {
         self::initKey();
 
-
-
         // séparer les 3 parties du token
         $parts = explode('.', $token);
         if (count($parts) !== 3) {
@@ -72,11 +70,11 @@ class JWTService
         // recréer la signature pour vérification
         $signature = hash_hmac('sha256', $base64Header . '.' . $base64Payload, self::$key, true);
 
-        if (!hash_equals(self::base64url_encode($base64Signature), $signature)) return false;
+        if (!hash_equals(self::base64url_decode($base64Signature), $signature)) return false;
         // decoder le payload
         $payload = json_decode(self::base64url_decode($base64Payload), true);
 
-        if (isset($payload['exp']) && $payload['exp'] <  time()) return false;
+        if (isset($payload['exp']) && $payload['exp'] < time()) return false;
 
         return $payload;
     }

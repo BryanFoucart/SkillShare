@@ -101,7 +101,7 @@ class UserRepository
         return $user;
     }
 
-    public function findUserById(string $id): ?User
+    public function findUserById(int|string $id): ?User
     {
         $sql = "SELECT * FROM `user` WHERE id_user = ?";
         $stmt = $this->pdo->prepare($sql);
@@ -120,7 +120,6 @@ class UserRepository
 
         return $user;
     }
-
 
     public function update(User $user): bool
     {
@@ -141,7 +140,7 @@ class UserRepository
             $user->getUserName(),
             $user->getEmail(),
             json_encode($user->getRole()),
-            (int)$user->getisVerified(),
+            (int)$user->getIsVerified(),
             $user->getEmailToken(),
             $user->getVerifiedAt(),
             $user->getPassword(),
