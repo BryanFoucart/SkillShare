@@ -43,8 +43,12 @@ export class AuthManager {
   }
 
   static getUser() {
-    const userStr = localStorage.getItem("user");
-    return userStr ? JSON.parse(userStr) : null;
+    const token = localStorage.getItem("JWTtoken");
+    if (!token) return false;
+    const userStr = JSON.parse(localStorage.getItem("user"));
+    const payload = JSON.parse(atob(token.split(".")[1]));
+    const completeUser = { ...userStr, ...payload };
+    return userStr && payload ? completeUser : null;
   }
 
   static isAdmin() {
