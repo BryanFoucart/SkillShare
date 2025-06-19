@@ -1,0 +1,30 @@
+<section class="profil">
+
+  <div class="access-messages" style="display:none;">
+    <div id="access-msg"></div>
+  </div>
+  <input type="hidden" id="api-url" value="<%= typeof API_URL !== 'undefined' ? API_URL : '' %>">
+  <!-- infos personnelles -->
+  <div class="profile-card info-section">
+    <form action="" id="info-form">
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="username">
+            username</label>
+          <input type="text" id="username" name="username">
+          <span class="error" data-error="username"></span>
+          <label for="email">
+            email</label>
+          <input type="email" id="email" name="email">
+          <span class="error" data-error="email"></span>
+        </div>
+        <div class="form-actions">
+          <button type="submit">Valider</button>
+          <div class="message-container" style="display:none;">
+            <div id="verify-msg"></div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

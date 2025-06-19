@@ -1,0 +1,14 @@
+<section class="verify">
+  <input
+    type="hidden"
+    id="api-url"
+    value="<%= typeof API_URL !== 'undefined' ? API_URL : '' %>"
+  />
+  <div class="message-container">
+    <div id="verify-msg">Vérification de votre email en cours...</div>
+    <div id="login-link" style="display: none">
+      <p>Votre compte est maintenant vérifié !</p>
+      <a href="/connexion" class="btn btn-primary">Se connecter</a>
+    </div>
+  </div>
+</section>

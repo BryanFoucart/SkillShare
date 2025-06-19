@@ -1,0 +1,29 @@
+{
+  "name": "shareskill",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --style=compressed --watch styles:public/assets/styles",
+    "server": "nodemon server.js",
+    "browsersync": "browser-sync start --proxy http://localhost:3000 --files \"public/assets/styles/**/*.css,public/assets/js/**/*.js,views/**/*.ejs\" --no-notify",
+    "start": "concurrently \"npm run sass\" \"npm run server\" \"npm run browsersync\""
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "nodemailer": "^7.0.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.10",
+    "sass": "^1.89.1"
+  }
+}

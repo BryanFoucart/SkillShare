@@ -1,0 +1,21 @@
+{
+  "name": "Skill-Share",
+  "short_name": "SkillShare",
+  "icons": [
+    {
+      "src": "/public/media/favicon/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/public/media/favicon/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#f9b233",
+  "background_color": "#F9B233",
+  "display": "standalone"
+}

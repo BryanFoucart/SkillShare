@@ -1,0 +1,108 @@
+@use "../abstracts/variables" as *;
+
+form {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 30px 40px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.register-link,
+.forgot-password-link {
+  display: block;
+  text-align: center;
+  margin-top: $spacing-md;
+  color: $primary-color;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.register-link a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+  outline: none;
+}
+
+input[type="file"] {
+  padding: 8px;
+}
+
+button[type="submit"] {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 0;
+  background: #007bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #0056b3;
+}
+
+/* Nouvelle classe pour les inputs avec erreur */
+input.error-input:focus {
+  border-color: #dc3545; /* Rouge */
+  box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.15); /* Rouge transparent */
+  outline: none;
+}
+
+span.error {
+  color: red;
+  font-size: small;
+  font-style: italic;
+}
+
+/* Optionnel : bordure rouge même sans focus */
+input.error-input {
+  border-color: #dc3545;
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 25px 20px;
+  }
+}
