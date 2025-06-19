@@ -92,4 +92,53 @@ document.addEventListener("DOMContentLoaded", () => {
       messageContainer.style.display = "block";
     }
   });
+
+  // Gérer l'avatar
+  const avatarImg = document.getElementById("user-avatar");
+  // const UPLOADS_URL = document.getElementById("uploads-url")?.value;
+  if (user.avatar) {
+    avatarImg.src = `${API_URL}/uploads/avatar/${user.avatar}`;
+  } else {
+    avatarImg.src = "/uploads/avatar_old/default-avatar.jpg";
+  }
+  // Gérer le formulaire d'avatar
+  const avatarForm = document.getElementById("avatar-form");
+  const avatarInput = document.getElementById("avatar-input");
+  const avatarMsg = document.getElementById("avatar-msg");
+
+  avatarForm?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // Préparer le fichier pour l'upload
+    const formData = new FormData();
+    const file = avatarInput.files[0];
+    if (!file) {
+      avatarMsg.textContent = "Veuillez sélectionner un fichier";
+      avatarMsg.className = "error";
+      return;
+    }
+    formData.append("avatar", file);
+
+    try {
+      const result = await fetchData({
+        route: "/api/user/update-avatar",
+        api: API_URL,
+        options: {
+          method: "POST",
+          body: formData,
+        },
+      });
+
+      if (result.success) {
+        // Mettre à jour l'avatar dans le localStorage
+        const updatedUser = { ...user, avatar: result.avatar };
+        localStorage.setItem("user", JSON.stringify(updatedUser));
+
+        // Mettre à jour l'image
+        avatarImg.src = `${API_URL}/uploads/avatar/${updatedUser.avatar}`;
+      }
+    } catch (error) {
+      console.error("Erreur lors de la mise à jour de l'avatar:", error);
+    }
+  });
 });

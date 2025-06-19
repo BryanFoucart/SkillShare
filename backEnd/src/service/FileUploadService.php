@@ -10,6 +10,7 @@ class FileUploadService
     private const MAX_FILE_SIZE = 2 * 1024 * 1024; // 2 Mo
     private const ALLOWED_MIME_TYPES = [
         'image/jpg' => 'jpg',
+        'image/jpeg' => 'jpeg',
         'image/png' => 'png',
         'image/webp' => 'webp',
         'image/gif' => 'gif',
@@ -54,5 +55,18 @@ class FileUploadService
 
         // Retourner le chemin relatif pour la base de données
         return $safeName;
+    }
+    /**
+     * Supprime un ancien avatar
+     * @param string $filename Le nom du fichier à supprimer
+     * @return bool True si le fichier a été supprimé, false sinon
+     */
+    public static function deleteOldAvatar(string $filename, $upload_dir = self::UPLOAD_DIR): bool
+    {
+        $filepath = $upload_dir . $filename;
+        if (file_exists($filepath)) {
+            return unlink($filepath);
+        }
+        return false;
     }
 }
