@@ -10,6 +10,12 @@ form {
   transition: box-shadow 0.3s ease;
 }
 
+button[type="submit"][disabled="true"] {
+  background: #4c4d4c84 !important;
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+}
+
 form:hover {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }

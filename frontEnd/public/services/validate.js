@@ -1,6 +1,5 @@
 export function validateRegisterForm(form) {
   const formData = new FormData(form);
-  const register = document.querySelector("#register-form");
   const errors = {};
   // console.log(formData.get("email"));
   if (formData.get("username") !== null && !formData.get("username").trim())
@@ -10,8 +9,9 @@ export function validateRegisterForm(form) {
   const emailRegex = new RegExp(
     "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
   );
-  const email = formData.get("email").trim();
-  if (!emailRegex.test(email)) {
+  const email = formData.get("email")?.trim();
+
+  if (formData.get("email") !== null && !emailRegex.test(email)) {
     errors.email = "Email invalide";
     console.log(errors.email);
   }
@@ -20,8 +20,8 @@ export function validateRegisterForm(form) {
   const passwordRegex = new RegExp(
     "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{12,}$"
   );
-  const password = formData.get("password").trim();
-  if (!passwordRegex.test(password)) {
+  const password = formData.get("password")?.trim();
+  if (formData.get("password") !== null && !passwordRegex.test(password)) {
     errors.password = "Mot de passe invalide";
     console.log(errors.password);
   }
