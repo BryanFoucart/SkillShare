@@ -132,7 +132,9 @@ class UserRepository
             email_token = ?,
             verified_at = ?,
             password = ?,
-            avatar = ?
+            avatar = ?,
+            reset_ad = ?,
+            reset_token = ?,
             WHERE id_user = ?"
         );
 
@@ -145,7 +147,9 @@ class UserRepository
             $user->getVerifiedAt(),
             $user->getPassword(),
             $user->getAvatar(),
-            $user->getId()
+            $user->getId(),
+            $user->getResetAt(),
+            $user->getResetToken()
         ]);
     }
     /**
