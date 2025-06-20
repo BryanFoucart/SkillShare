@@ -148,4 +148,26 @@ class UserRepository
             $user->getId()
         ]);
     }
+    /**
+     * Trouve un utilisateur par son token de réinitialisation
+     * @param string $token
+     * @return User|null
+     */
+    public function findByResetToken(string $token): ?User
+    {
+        $stmt = $this->pdo->prepare("SELECT * FROM user WHERE reset_token = ?");
+        $stmt->execute([$token]);
+        $data = $stmt->fetch();
+        if (!$data) return null;
+
+        $data['is_verified'] = (bool)$data['is_verified']; // Convertir en booléen
+        $user = new User($data);
+        $user->setId((int)$data['id']);
+        $user->setRole($data['role']);
+        $user->setEmailToken($data['email_token']);
+        $user->setPassword($data['password']);
+        $user->setResetToken($data['reset_token']);
+        $user->setResetAt($data['reset_at'] ? new DateTime($data['reset_at']) : null);
+        return $user;
+    }
 }

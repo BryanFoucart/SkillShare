@@ -61,4 +61,19 @@ class MailService
         // Send the email";
         mail($email, $subject, $message, $headers);
     }
+    /**
+     * Envoie un lien de réinitialisation du mot de passe
+     * @param string $email
+     * @param string $token
+     */
+    public static function sendPasswordResetEmail(string $email, string $token): void
+    {
+        $link = "http://localhost:3001/reset-password?token=" . urlencode($token);
+
+        $subject = "Réinitialisation de votre mot de passe SkillSwap";
+        $message = "Vous avez demandé une réinitialisation de mot de passe. Cliquez ici pour le réinitialiser : $link\n\n";
+        $message .= "Si vous n'avez pas demandé cette réinitialisation, ignorez cet email.";
+
+        mail($email, $subject, $message, "From: noreply@skillswap.local");
+    }
 }

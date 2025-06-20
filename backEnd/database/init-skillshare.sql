@@ -15,7 +15,9 @@ CREATE TABLE
         is_verified BOOLEAN,
         verified_at DATETIME,
         password VARCHAR(255) NOT NULL,
-        created_at DATETIME
+        created_at DATETIME,
+        reset_at DATETIME,
+        reset_token VARCHAR(100)
     );
 
 CREATE TABLE

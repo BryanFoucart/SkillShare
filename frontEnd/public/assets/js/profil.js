@@ -141,4 +141,32 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Erreur lors de la mise à jour de l'avatar:", error);
     }
   });
+  // Gérer la demande de réinitialisation du mot de passe
+  const resetBtn = document.getElementById("request-reset-btn");
+  const resetMsg = document.getElementById("reset-msg");
+  console.log(resetBtn);
+  console.log(resetMsg);
+
+  resetBtn?.addEventListener("click", async () => {
+    try {
+      const result = await fetchData({
+        route: "/api/user/request-reset",
+        api: API_URL,
+        options: {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: user.email }),
+        },
+      });
+
+      if (result.success) {
+        resetMsg.textContent = "Un email de réinitialisation vous a été envoyé";
+        resetMsg.className = "success";
+        resetBtn.disabled = true;
+      }
+    } catch (error) {
+      resetMsg.textContent = error.message || "Erreur lors de la demande";
+      resetMsg.className = "error";
+    }
+  });
 });

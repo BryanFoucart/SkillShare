@@ -60,6 +60,15 @@ router.get("/dashboard", (req, res) => {
   });
 });
 
+router.get("/reset-password", (req, res) => {
+  res.render("layout", {
+    title: "Réinitialisation du mot de passe",
+    view: "pages/reset-password",
+    token: req.query.token,
+    ...globals,
+  });
+});
+
 // Cette route doit être placée en dernier pour capturer toutes les routes non définies
 router.use((req, res, next) => {
   console.log("Route 404 activée pour:", req.path); // Log pour le débogage
