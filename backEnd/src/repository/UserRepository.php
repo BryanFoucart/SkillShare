@@ -133,13 +133,13 @@ class UserRepository
             verified_at = ?,
             password = ?,
             avatar = ?,
-            reset_ad = ?,
-            reset_token = ?,
+            reset_at = ?,
+            reset_token = ?
             WHERE id_user = ?"
         );
 
         return $stmt->execute([
-            $user->getUserName(),
+            $user->getUsername(),
             $user->getEmail(),
             json_encode($user->getRole()),
             (int)$user->getIsVerified(),
@@ -147,9 +147,9 @@ class UserRepository
             $user->getVerifiedAt(),
             $user->getPassword(),
             $user->getAvatar(),
-            $user->getId(),
             $user->getResetAt(),
-            $user->getResetToken()
+            $user->getResetToken(),
+            $user->getId()
         ]);
     }
     /**
